@@ -45,7 +45,7 @@ export const BeforeAfterVisual: React.FC = () => {
         </div>
 
         {/* Dynamic Interactive Display */}
-        <div className="relative min-h-[420px] bg-slate-50 dark:bg-slate-950/80 rounded-3xl p-8 border border-slate-200 dark:border-slate-800 shadow-2xl flex flex-col justify-center">
+        <div className="relative min-h-[420px] p-8  flex flex-col justify-center">
           <AnimatePresence mode="wait">
             {activeTab === 'BEFORE' ? (
               <motion.div
@@ -112,7 +112,7 @@ export const BeforeAfterVisual: React.FC = () => {
 
                 {/* Patient Hub at Center */}
                 <div className="flex flex-col items-center">
-                  <div className="bg-[#000066] text-white p-6 rounded-2xl border-2 border-[#FF6600] shadow-2xl text-center max-w-sm w-full relative">
+                  <div className="bg-[#000066] text-white p-6 rounded-2xl shadow-2xl text-center max-w-sm w-full relative">
                     <div className="w-12 h-12 rounded-full bg-[#FF6600] text-white flex items-center justify-center mx-auto mb-2 font-bold shadow-lg">
                       <UserCheck className="w-7 h-7" />
                     </div>
