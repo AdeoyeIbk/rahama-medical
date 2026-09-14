@@ -4,6 +4,7 @@ import React from 'react';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { Hero } from '@/components/marketing/Hero';
+import MacbookScrollDemo from '@/components/ui/macbook-scroll-demo';
 import { ProblemStoryteller } from '@/components/marketing/ProblemStoryteller';
 import { BeforeAfterVisual } from '@/components/marketing/BeforeAfterVisual';
 import { JourneyTimeline } from '@/components/marketing/JourneyTimeline';
@@ -21,7 +22,12 @@ export default function HomePage() {
         {/* 1. Hero */}
         <Hero />
 
-        {/* 2. The Problem Storyteller */}
+        {/* 2. Macbook Scroll displaying Patient Record Dashboard */}
+        <div className="-mt-20 sm:-mt-36 md:-mt-52 relative z-20 overflow-hidden bg-transparent">
+          <MacbookScrollDemo />
+        </div>
+
+        {/* 3. The Problem Storyteller */}
         <ProblemStoryteller />
 
         {/* 3. About Rahama Story Banner */}
