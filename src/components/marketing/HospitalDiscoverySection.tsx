@@ -31,12 +31,12 @@ export const HospitalDiscoverySection: React.FC<HospitalDiscoverySectionProps> =
     <section id="discovery" className="py-20 bg-slate-50 dark:bg-[#030318] text-slate-900 dark:text-slate-100 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#FF6600]">Hospital Discovery</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#FF6600]">Connected Hospitals</span>
           <h2 className="text-3xl font-extrabold font-heading text-[#000066] dark:text-white">
-            Find & Select a <span className="heading-accent">Participating Rahama Facility</span>
+            Find a <span className="heading-accent">Connected Hospital Near You</span>
           </h2>
           <p className="text-sm text-slate-600 dark:text-slate-300">
-            Patients can discover participating healthcare centers and designate their Home Hospital for primary record management.
+            Browse hospitals on the Rahama network and pick your main hospital for managing your medical records.
           </p>
         </div>
 
@@ -75,11 +75,11 @@ export const HospitalDiscoverySection: React.FC<HospitalDiscoverySectionProps> =
                     </div>
                     {isHome ? (
                       <Badge variant="orange" size="sm">
-                        <CheckCircle className="w-3.5 h-3.5" /> Home Hospital
+                        <CheckCircle className="w-3.5 h-3.5" /> Main Hospital
                       </Badge>
                     ) : (
                       <Badge variant="navy" size="sm">
-                        Verified Partner
+                        Connected Partner
                       </Badge>
                     )}
                   </div>
@@ -107,7 +107,7 @@ export const HospitalDiscoverySection: React.FC<HospitalDiscoverySectionProps> =
                     variant={isHome ? 'outline' : 'primary'}
                     onClick={() => onSelectHomeHospital(hosp)}
                   >
-                    {isHome ? 'Primary Selected' : 'Select as Home Hospital'}
+                    {isHome ? 'Primary Selected' : 'Set as Main Hospital'}
                   </Button>
                 </div>
               </Card>

@@ -5,8 +5,8 @@ import { Badge } from '@/components/ui/Badge';
 import { MissionVisionValuesSection } from '@/components/marketing/MissionVisionValuesSection';
 
 export const metadata = {
-  title: 'About Rahama Digital Health — Mission, Vision & Values',
-  description: 'Learn about Rahama Digital Health infrastructure, our mission, vision, and core values for connected healthcare across Africa.',
+  title: 'About Rahama Digital Health — Simple, Connected Care',
+  description: 'Learn how Rahama connects hospitals and patients so medical records travel safely across Africa.',
 };
 
 export default function AboutPage() {
@@ -21,10 +21,10 @@ export default function AboutPage() {
               About Rahama
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-extrabold font-heading text-white">
-              Building Infrastructure for <span className="heading-accent text-white">Connected Healthcare</span>
+              Connecting Hospitals. <span className="heading-accent text-white">Protecting Patients.</span>
             </h1>
             <p className="text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
-              Rahama sits between patients, doctors, and hospitals—enabling authorized medical information to reach the right healthcare professionals with explicit patient permission.
+              Rahama makes sure your medical history travels with you safely whenever you visit a new doctor or hospital—giving you total control of your records on your phone.
             </p>
           </div>
         </section>

@@ -2,36 +2,36 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Hospital, WarningCircle, ArrowRight, ShieldCheck, FileText, Prohibit } from '@phosphor-icons/react';
+import { WarningCircle, ArrowRight, ShieldCheck, FileText, Prohibit } from '@phosphor-icons/react';
 
 export const ProblemStoryteller: React.FC = () => {
   const cards = [
     {
       id: 'hosp-a',
-      step: 'Hospital A (Lagos)',
-      title: 'Isolated Medical Records',
-      description: 'Patient visits Hospital A for initial diagnosis. Case notes, lab reports, and imaging are locked inside Hospital A\'s local computer database.',
-      impact: 'Paper files or lost PDF exports',
+      step: '1. Hospital #1 (Lagos)',
+      title: 'Your files stay locked on their computer',
+      description: 'You get treated at a clinic in Lagos. But your lab tests, prescriptions, and doctor notes stay locked inside their computer. When you leave, nothing comes with you.',
+      impact: 'You leave with paper receipts or nothing at all',
       icon: <FileText className="w-8 h-8 text-amber-500" />,
-      badge: 'Fragmented Start'
+      badge: 'Files Left Behind'
     },
     {
       id: 'hosp-b',
-      step: 'Hospital B (Abuja)',
-      title: 'Repeated Tests & Blind Spots',
-      description: 'Six months later, patient relocates to Abuja and visits Hospital B. Doctors have zero access to previous treatment history, forcing duplicate bloodwork.',
-      impact: 'Duplicated cost & delayed diagnosis',
+      step: '2. Hospital #2 (Abuja)',
+      title: 'The new doctor has to guess and re-test',
+      description: 'Months later in Abuja, you fall sick and visit a new doctor. Because they cannot see your past medical history, you end up paying for the exact same blood test all over again.',
+      impact: 'Wasted money and delayed treatment',
       icon: <Prohibit className="w-8 h-8 text-red-500" />,
-      badge: 'Information Void'
+      badge: 'Paying Twice'
     },
     {
       id: 'hosp-c',
-      step: 'Hospital C (Kano)',
-      title: 'Emergency Without Context',
-      description: 'During emergency care at Hospital C, clinicians struggle to confirm drug allergies or existing conditions, risking adverse reactions.',
-      impact: 'Reduced continuity of care',
+      step: '3. Hospital #3 (Emergency)',
+      title: 'In an emergency, doctors don\'t know your allergies',
+      description: 'If you\'re rushed to a hospital in an emergency, doctors won\'t know if you\'re allergic to penicillin or taking daily heart medicine. They have to make quick guesses.',
+      impact: 'Dangerous medical mistakes',
       icon: <WarningCircle className="w-8 h-8 text-red-600" />,
-      badge: 'Critical Vulnerability'
+      badge: 'High Risk'
     }
   ];
 
@@ -41,10 +41,10 @@ export const ProblemStoryteller: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-[#000066] dark:text-white">
-            A patient&apos;s journey shouldn&apos;t mean <span className="heading-accent">starting over</span> at every clinic.
+            Why changing hospitals is currently a headache—and <span className="heading-accent">how we fix it.</span>
           </h2>
           <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-            When healthcare information is trapped inside isolated hospital EMRs, patients endure repeated tests, higher expenses, and fragmented medical histories.
+            If you&apos;ve ever had to re-explain your whole medical history or pay for the exact same lab test twice, you already know the problem. Here&apos;s what happens today:
           </p>
         </div>
 
@@ -81,7 +81,7 @@ export const ProblemStoryteller: React.FC = () => {
               </div>
 
               <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-red-600 dark:text-red-400 font-medium">
-                <span>Consequence: {card.impact}</span>
+                <span>The result: {card.impact}</span>
               </div>
             </motion.div>
           ))}
@@ -97,19 +97,19 @@ export const ProblemStoryteller: React.FC = () => {
         >
           <div className="space-y-2 text-left">
             <span className="text-xs uppercase font-bold text-[#FF6600] tracking-wider flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4" /> The Rahama Infrastructure Solution
+              <ShieldCheck className="w-4 h-4" /> How Rahama Changes Everything
             </span>
             <h3 className="text-2xl font-bold font-heading text-white">
-              Bridge your hospital systems without replacing existing EMRs.
+              Rahama connects the dots so your medical story goes wherever you go.
             </h3>
             <p className="text-sm text-blue-100 max-w-2xl">
-              Rahama sits securely between participating facilities, granting authorized clinicians instant access to patient-approved medical history.
+              Hospitals don&apos;t need to change their computers or buy new software. Rahama works quietly in the background so your doctor gets the full picture—only when you give permission.
             </p>
           </div>
 
           <a href="/solution" className="shrink-0">
             <button className="bg-[#FF6600] hover:bg-[#e65c00] text-white font-semibold text-sm px-6 py-3 rounded-lg flex items-center gap-2 shadow-md transition-all">
-              <span>Explore Solution Architecture</span>
+              <span>See How Rahama Works</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </a>

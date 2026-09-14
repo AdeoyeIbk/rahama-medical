@@ -2,28 +2,28 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, LockKey, Eye, Scales, ShieldStar } from '@phosphor-icons/react';
+import { ShieldCheck, LockKey, Eye, Scales } from '@phosphor-icons/react';
 
 export const SecuritySection: React.FC = () => {
   const pillars = [
     {
-      title: 'Patient-Controlled Consent',
-      desc: 'No doctor or hospital can view medical history without explicit authorization from the patient.',
+      title: 'You Say Who Gets Access',
+      desc: 'No doctor or hospital can look at your medical history unless you explicitly approve it on your phone.',
       icon: <LockKey className="w-6 h-6 text-[#FF6600]" />
     },
     {
-      title: 'End-to-End Encryption',
-      desc: 'Clinical records are encrypted in transit and at rest using industry-standard cryptographic algorithms.',
+      title: 'Bank-Grade Protection',
+      desc: 'Your medical files are locked with the same high-level digital security used by international financial institutions.',
       icon: <ShieldCheck className="w-6 h-6 text-[#000066] dark:text-blue-300" />
     },
     {
-      title: 'Immutable Audit Trail',
-      desc: 'Every lookup, consultation view, and record creation is logged with exact timestamps and facility IDs.',
+      title: 'Complete Access History',
+      desc: 'Check your phone anytime to see a clear, un-changeable list of every doctor who opened your medical file.',
       icon: <Eye className="w-6 h-6 text-[#FF6600]" />
     },
     {
-      title: 'Data Privacy Compliance',
-      desc: 'Architected to align with the Nigeria Data Protection Act (NDPA) and international health privacy standards.',
+      title: 'Strict Privacy Protection',
+      desc: 'Built strictly according to national data privacy laws (including NDPA) so your personal information stays completely safe.',
       icon: <Scales className="w-6 h-6 text-[#000066] dark:text-blue-300" />
     }
   ];
@@ -33,10 +33,10 @@ export const SecuritySection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-white">
-            Security is not a feature; <span className="heading-accent text-white">it&apos;s our foundation.</span>
+            Your privacy is <span className="heading-accent text-white">100% in your hands.</span>
           </h2>
           <p className="text-base text-blue-100 leading-relaxed">
-            Rahama delivers trusted global health infrastructure that enables continuity across locations while respecting ethics, autonomy, and privacy.
+            We built Rahama with one strict rule: your medical records belong to you—not us, and not the hospital.
           </p>
         </div>
 

@@ -34,13 +34,13 @@ export default function SolutionPage() {
         <section className="bg-[#000066] text-white py-20 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
             <Badge variant="orange" size="md">
-              Solution Architecture
+              How Rahama Works
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-extrabold font-heading text-white">
-              One Record. Every Hospital. <span className="heading-accent text-white">Total Control.</span>
+              One Health Record. Every Hospital. <span className="heading-accent text-white">Total Control.</span>
             </h1>
             <p className="text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
-              Rahama provides a lifelong digital health identity and consent-based authorization layer without replacing existing hospital EMR systems.
+              Rahama gives you one lifelong health ID that works at any participating hospital—so doctors get the info they need to treat you, only when you say yes.
             </p>
           </div>
         </section>

@@ -4,9 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "../ui/Button";
-import { Badge } from "../ui/Badge";
 import {
-  ShieldCheck,
   ArrowRight,
   Hospital,
   UserCheck,
@@ -28,17 +26,20 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 space-y-6 text-left"
           >
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-blue-200 text-xs font-medium border border-white/10">
+              <span className="w-2 h-2 rounded-full bg-[#FF6600] animate-pulse" />
+              Simple, Connected Healthcare for Everyone
+            </div>
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading leading-tight tracking-tight text-white">
-              Continuity of care shouldn&apos;t{" "}
+              Your medical history should{" "}
               <span className="heading-accent text-white">
-                stop at a border.
+                follow you anywhere.
               </span>
             </h1>
 
             <p className="text-lg sm:text-xl text-blue-100 font-normal leading-relaxed max-w-2xl">
-              Rahama connects patients, doctors, and healthcare facilities
-              across Africa through secure infrastructure—enabling lifelong
-              medical records to move with the patient.
+              Imagine moving to a new city, walking into a hospital, and the doctor already knows your medical background—no lost paper files, no paying for the same test twice, and zero starting from scratch.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-4">
@@ -48,7 +49,7 @@ export const Hero: React.FC = () => {
                   size="lg"
                   rightIcon={<ArrowRight className="w-5 h-5" />}
                 >
-                  Partner With Us
+                  Join as a Partner
                 </Button>
               </Link>
               <Link href="/solution">
@@ -66,7 +67,7 @@ export const Hero: React.FC = () => {
                   size="md"
                   className="text-blue-200 hover:text-white hover:bg-white/5 underline underline-offset-4"
                 >
-                  Find a Rahama Hospital
+                  Find a Connected Hospital
                 </Button>
               </Link>
             </div>
@@ -77,22 +78,22 @@ export const Hero: React.FC = () => {
                 <p className="text-2xl sm:text-3xl font-extrabold text-[#FF6600] font-heading">
                   100%
                 </p>
-                <p className="text-xs text-blue-200 mt-0.5">Patient Owned</p>
+                <p className="text-xs text-blue-200 mt-0.5">You Own Your Data</p>
               </div>
               <div>
                 <p className="text-2xl sm:text-3xl font-extrabold text-white font-heading">
                   Zero
                 </p>
                 <p className="text-xs text-blue-200 mt-0.5">
-                  EMR Replacement Needed
+                  Extra Work for Hospitals
                 </p>
               </div>
               <div>
                 <p className="text-2xl sm:text-3xl font-extrabold text-[#FF6600] font-heading">
-                  E2E
+                  Bank-Grade
                 </p>
                 <p className="text-xs text-blue-200 mt-0.5">
-                  Encrypted Consent
+                  Private & Secure
                 </p>
               </div>
             </div>
@@ -113,8 +114,7 @@ export const Hero: React.FC = () => {
                   <div className="w-3 h-3 rounded-full bg-emerald-500" />
                 </div>
                 <span className="text-[11px] font-mono text-slate-400 flex items-center gap-1">
-                  <Lock className="w-3 h-3 text-[#FF6600]" /> Rahama Universal
-                  Health ID
+                  <Lock className="w-3 h-3 text-[#FF6600]" /> Your Rahama Health Passport
                 </span>
               </div>
 
@@ -123,7 +123,7 @@ export const Hero: React.FC = () => {
                 <div className="flex items-start justify-between">
                   <div>
                     <span className="text-[10px] uppercase font-bold text-[#FF6600] tracking-wider">
-                      Health ID Issued
+                      Verified Health ID
                     </span>
                     <h4 className="text-lg font-bold font-heading text-white mt-0.5">
                       Amina Ibrahim Bello
@@ -140,19 +140,18 @@ export const Hero: React.FC = () => {
                 <div className="grid grid-cols-2 gap-3 mt-4 pt-3 border-t border-blue-800/60 text-xs">
                   <div>
                     <span className="text-slate-400 text-[10px] block">
-                      Home Hospital
+                      Registered Hospital
                     </span>
                     <span className="font-semibold text-blue-100 flex items-center gap-1">
-                      <Hospital className="w-3.5 h-3.5 text-[#FF6600]" /> LUTH
-                      Lagos
+                      <Hospital className="w-3.5 h-3.5 text-[#FF6600]" /> LUTH, Lagos
                     </span>
                   </div>
                   <div>
                     <span className="text-slate-400 text-[10px] block">
-                      Consent Status
+                      Doctor Access
                     </span>
                     <span className="font-semibold text-emerald-400">
-                      Active Authorized
+                      Approved by You
                     </span>
                   </div>
                 </div>
@@ -162,10 +161,7 @@ export const Hero: React.FC = () => {
               <div className="bg-slate-950/70 rounded-lg p-3 border border-slate-800 text-xs text-slate-300 flex items-center justify-between">
                 <span className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  Cross-Hospital Record Sync Active
-                </span>
-                <span className="text-[10px] text-[#FF6600] font-mono">
-                  256-bit Encrypted
+                  Medical history ready whenever you visit a new doctor
                 </span>
               </div>
             </div>

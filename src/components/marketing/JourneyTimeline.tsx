@@ -20,8 +20,8 @@ export const JourneyTimeline: React.FC = () => {
   const steps = [
     {
       num: '01',
-      title: 'Register Identity',
-      description: 'The patient receives their verified Rahama Health ID through their participating healthcare facility.',
+      title: 'Get Your Free Health ID',
+      description: 'When you visit a connected hospital, you get a unique Rahama Health ID linked safely to your phone number.',
       className: 'md:col-span-2',
       icon: (
         <div className="flex items-center justify-between w-full">
@@ -38,7 +38,7 @@ export const JourneyTimeline: React.FC = () => {
           <div className="flex items-center justify-between z-10">
             <span className="text-xs font-mono text-blue-300 flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              VERIFIED RAHAMA ID
+              YOUR RAHAMA ID
             </span>
             <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
               ACTIVE
@@ -47,7 +47,7 @@ export const JourneyTimeline: React.FC = () => {
           <div className="z-10 bg-slate-950/60 p-3 rounded-lg border border-slate-800 flex items-center justify-between">
             <div>
               <p className="text-xs font-semibold text-white">RH-8839-2026-NGA</p>
-              <p className="text-[10px] text-slate-400">National Health Infrastructure Index</p>
+              <p className="text-[10px] text-slate-400">Linked to your mobile number</p>
             </div>
             <QrCode className="w-7 h-7 text-[#FF6600]" />
           </div>
@@ -57,8 +57,8 @@ export const JourneyTimeline: React.FC = () => {
     },
     {
       num: '02',
-      title: 'Receive Clinical Care',
-      description: 'The hospital records consultation, labs, and diagnoses using its existing EMR system without workflow disruption.',
+      title: 'Doctor Treats You Normally',
+      description: 'The hospital writes down your consultation, lab tests, and prescriptions on their computer just like they always do.',
       className: 'md:col-span-1',
       icon: (
         <div className="flex items-center justify-between w-full">
@@ -73,17 +73,17 @@ export const JourneyTimeline: React.FC = () => {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[7rem] rounded-xl bg-slate-900 p-4 flex-col justify-between border border-slate-800 relative overflow-hidden">
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-semibold text-slate-300">Existing EMR Sync</span>
+            <span className="text-[11px] font-semibold text-slate-300">Hospital Software</span>
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           </div>
           <div className="space-y-1.5 font-mono text-[10px]">
             <div className="flex justify-between text-slate-400 bg-slate-950/80 p-1.5 rounded">
-              <span>Encounters:</span>
-              <span className="text-emerald-400">Synced (HL7/FHIR)</span>
+              <span>Doctor Notes:</span>
+              <span className="text-emerald-400">Saved</span>
             </div>
             <div className="flex justify-between text-slate-400 bg-slate-950/80 p-1.5 rounded">
-              <span>Vitals & Labs:</span>
-              <span className="text-blue-400">Auto-Indexed</span>
+              <span>Lab Results:</span>
+              <span className="text-blue-400">Recorded</span>
             </div>
           </div>
         </div>
@@ -91,8 +91,8 @@ export const JourneyTimeline: React.FC = () => {
     },
     {
       num: '03',
-      title: 'Secure Linkage',
-      description: 'Medical summaries are encrypted and securely indexed under the patient\'s lifelong Rahama Health ID.',
+      title: 'Your File Gets Saved Safely',
+      description: 'A copy of your medical summary is locked with bank-grade security under your Rahama Health ID so strangers can\'t view it.',
       className: 'md:col-span-1',
       icon: (
         <div className="flex items-center justify-between w-full">
@@ -108,14 +108,14 @@ export const JourneyTimeline: React.FC = () => {
         <div className="flex flex-1 w-full h-full min-h-[7rem] rounded-xl bg-gradient-to-b from-slate-900 to-slate-950 p-4 flex-col justify-between border border-slate-800 relative overflow-hidden">
           <div className="flex items-center space-x-2 text-slate-300">
             <LockKey className="w-4 h-4 text-[#FF6600]" />
-            <span className="text-[11px] font-semibold">AES-256 Encryption</span>
+            <span className="text-[11px] font-semibold">Bank-Level Privacy</span>
           </div>
-          <div className="bg-slate-950 p-2 rounded border border-slate-800 font-mono text-[9px] text-slate-400 break-all leading-tight">
-            hash: 0x9f8a...3e2b19 | encrypted_payload
+          <div className="bg-slate-950 p-2 rounded border border-slate-800 font-mono text-[9px] text-slate-400 leading-tight">
+            Encrypted & protected from unauthorized access
           </div>
           <div className="flex items-center justify-between text-[10px] text-emerald-400">
             <span className="flex items-center gap-1">
-              <CheckCircle className="w-3 h-3" /> Zero Plaintext Storage
+              <CheckCircle className="w-3 h-3" /> 100% Private
             </span>
           </div>
         </div>
@@ -123,8 +123,8 @@ export const JourneyTimeline: React.FC = () => {
     },
     {
       num: '04',
-      title: 'Grant Permission',
-      description: 'When visiting another facility, the patient approves temporary record access via their portal or SMS token.',
+      title: 'You Say Who Gets Access',
+      description: 'When you visit a new doctor, you get a quick text message or phone code to unlock your medical records for that visit.',
       className: 'md:col-span-2',
       icon: (
         <div className="flex items-center justify-between w-full">
@@ -139,19 +139,19 @@ export const JourneyTimeline: React.FC = () => {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[7rem] rounded-xl bg-slate-900 p-4 flex-col justify-between border border-slate-800">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-slate-200">Patient Explicit Consent Engine</span>
+            <span className="text-xs font-semibold text-slate-200">Patient Phone Approval</span>
             <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded border border-blue-500/30">
-              TIME-BOUND ACCESS
+              TEMPORARY ACCESS
             </span>
           </div>
           <div className="grid grid-cols-2 gap-2 text-[11px]">
             <div className="bg-slate-950 p-2 rounded border border-slate-800">
-              <p className="text-slate-400 text-[9px]">Requesting Facility</p>
-              <p className="font-semibold text-slate-200 truncate">Lagos University Teaching Hosp.</p>
+              <p className="text-slate-400 text-[9px]">Requesting Clinic</p>
+              <p className="font-semibold text-slate-200 truncate">LUTH Emergency Care</p>
             </div>
             <div className="bg-slate-950 p-2 rounded border border-slate-800">
-              <p className="text-slate-400 text-[9px]">Consent Expiry</p>
-              <p className="font-semibold text-emerald-400">24 Hours (Active)</p>
+              <p className="text-slate-400 text-[9px]">Approval Status</p>
+              <p className="font-semibold text-emerald-400">Approved by You</p>
             </div>
           </div>
         </div>
@@ -159,8 +159,8 @@ export const JourneyTimeline: React.FC = () => {
     },
     {
       num: '05',
-      title: 'Informed Care',
-      description: 'Attending doctors review complete medical history to make faster, safer, and higher-quality decisions.',
+      title: 'Faster, Better Treatment',
+      description: 'Your new doctor instantly sees your allergies, past blood tests, and treatments—saving you time, money, and stress.',
       className: 'md:col-span-2',
       icon: (
         <div className="flex items-center justify-between w-full">
@@ -175,17 +175,17 @@ export const JourneyTimeline: React.FC = () => {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[7rem] rounded-xl bg-gradient-to-r from-slate-900 to-[#000066]/70 p-4 flex-col justify-between border border-slate-800">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-white">Unified Clinical Dashboard</span>
-            <span className="text-[10px] text-orange-400 font-mono">100% History Continuity</span>
+            <span className="text-xs font-semibold text-white">Full Medical History</span>
+            <span className="text-[10px] text-orange-400 font-mono">No Repeated Tests</span>
           </div>
           <div className="space-y-1 text-[10px]">
             <div className="bg-slate-950/70 p-1.5 rounded flex justify-between text-slate-300">
-              <span>Allergies & Contraindications:</span>
+              <span>Known Drug Allergies:</span>
               <span className="text-red-400 font-bold">Penicillin (Severe)</span>
             </div>
             <div className="bg-slate-950/70 p-1.5 rounded flex justify-between text-slate-300">
-              <span>Past Surgeries & Chronic Care:</span>
-              <span className="text-emerald-400">Indexed Across 3 Facilities</span>
+              <span>Previous Doctor Notes:</span>
+              <span className="text-emerald-400">Instantly Available</span>
             </div>
           </div>
         </div>
@@ -193,8 +193,8 @@ export const JourneyTimeline: React.FC = () => {
     },
     {
       num: '06',
-      title: 'Audit Visibility',
-      description: 'Every access event is logged to the patient\'s immutable audit trail, providing 100% transparency.',
+      title: 'See Who Viewed Your File',
+      description: 'Check your phone anytime to see a clear list of every doctor who opened your medical file and which hospital they were from.',
       className: 'md:col-span-1',
       icon: (
         <div className="flex items-center justify-between w-full">
@@ -209,12 +209,12 @@ export const JourneyTimeline: React.FC = () => {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[7rem] rounded-xl bg-slate-900 p-4 flex-col justify-between border border-slate-800">
           <div className="flex items-center justify-between text-[11px] text-slate-300">
-            <span>Immutable Access Log</span>
+            <span>Clear Access History</span>
             <Eye className="w-4 h-4 text-blue-400" />
           </div>
           <div className="bg-slate-950 p-2 rounded text-[9px] font-mono text-slate-400 space-y-1">
-            <p className="text-emerald-400">✔ Dr. Okonjo viewed Vitals</p>
-            <p className="text-slate-500">2026-09-14 08:30 GMT</p>
+            <p className="text-emerald-400">✔ Dr. Okonjo (LUTH) viewed file</p>
+            <p className="text-slate-500">Today at 8:30 AM</p>
           </div>
         </div>
       ),
@@ -226,10 +226,10 @@ export const JourneyTimeline: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-[#000066] dark:text-white">
-            The 6-Step <span className="heading-accent">Patient Journey</span>
+            How Rahama Works in <span className="heading-accent">6 Simple Steps</span>
           </h2>
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300">
-            From initial hospital onboarding to lifelong record continuity—transparent, secure, and patient-controlled.
+            Here is exactly what happens when you and your doctor use Rahama—no complicated tech setup required.
           </p>
         </div>
 

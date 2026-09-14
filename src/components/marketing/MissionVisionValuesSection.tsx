@@ -4,28 +4,28 @@ import { Heartbeat, ShieldCheck, Globe, Scales, LockKey } from '@phosphor-icons/
 export const MissionVisionValuesSection: React.FC = () => {
   const values = [
     {
-      title: 'Integrity',
-      desc: 'We uphold complete honesty and transparency in data handling, patient consent, and hospital partnerships.',
+      title: 'Honesty & Transparency',
+      desc: 'We are completely open about how your data is protected and who gets to see it. No fine print.',
       icon: <ShieldCheck className="w-6 h-6 text-[#FF6600]" />
     },
     {
       title: 'Compassion',
-      desc: 'Healthcare technology must serve human dignity, easing patient burden and empowering doctors.',
+      desc: 'Healthcare technology should make life easier for patients and doctors, reducing stress and paperwork.',
       icon: <Heartbeat className="w-6 h-6 text-[#000066] dark:text-blue-300" />
     },
     {
-      title: 'Security',
-      desc: 'End-to-end cryptographic protection and strict role-based access control guide every architectural decision.',
+      title: 'Safety First',
+      desc: 'Your medical files are locked behind strict security, ensuring only authorized doctors can ever view them.',
       icon: <LockKey className="w-6 h-6 text-[#FF6600]" />
     },
     {
-      title: 'Professionalism',
-      desc: 'Delivering robust, high-availability digital health infrastructure worthy of leading medical institutions.',
+      title: 'Reliability',
+      desc: 'We build strong, dependable systems that hospitals and clinics can rely on 24 hours a day, 7 days a week.',
       icon: <Globe className="w-6 h-6 text-[#000066] dark:text-blue-300" />
     },
     {
-      title: 'Faith & Responsibility',
-      desc: 'Guided by moral duty and humility in serving human health and well-being.',
+      title: 'Humility & Responsibility',
+      desc: 'We serve with respect and humility, honoring the trust placed in us by everyday families and doctors.',
       icon: <Scales className="w-6 h-6 text-[#FF6600]" />
     }
   ];
@@ -38,43 +38,43 @@ export const MissionVisionValuesSection: React.FC = () => {
             <div className="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
               <span className="text-xs font-bold uppercase tracking-wider text-[#FF6600]">Our Mission</span>
               <h3 className="text-2xl font-bold font-heading text-[#000066] dark:text-white">
-                Records Move With the Patient
+                Your Medical Story Travels With You
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                Create a connected healthcare ecosystem where medical records move securely with the patient across facilities and borders.
+                To connect hospitals across Africa so patients never have to start over or re-pay for tests when visiting a new doctor.
               </p>
             </div>
 
             <div className="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
               <span className="text-xs font-bold uppercase tracking-wider text-[#000066] dark:text-blue-400">Our Vision</span>
               <h3 className="text-2xl font-bold font-heading text-[#000066] dark:text-white">
-                Globally Trusted Ecosystem
+                One Connected Health Network
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                A globally trusted health-tech ecosystem connecting patients, doctors, and hospitals without geographical or technical borders.
+                A world where anyone can walk into any hospital and receive instant, safe, high-quality care without record barriers.
               </p>
             </div>
 
             <div className="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
               <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Our Purpose</span>
               <h3 className="text-2xl font-bold font-heading text-[#000066] dark:text-white">
-                Continuity Respecting Ethics
+                Putting Patients First
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                Trusted global health infrastructure enabling continuity across locations while respecting ethics, autonomy, and faith.
+                Making healthcare simpler, safer, and cheaper for everyday families while treating every person with respect and dignity.
               </p>
             </div>
           </div>
 
           <div className="mt-16 bg-[#000066] text-white rounded-2xl p-8 border border-blue-900 text-center space-y-3 shadow-xl">
             <span className="text-xs font-mono uppercase tracking-widest text-[#FF6600]">
-              Core Brand Principle
+              Our Foundation
             </span>
             <blockquote className="text-2xl sm:text-3xl font-extrabold font-heading italic">
               &ldquo;We treat, only God heals.&rdquo;
             </blockquote>
             <p className="text-xs text-blue-200 max-w-lg mx-auto">
-              We design medical technology with humility, recognizing our role as facilitators of compassionate, high-quality clinical care.
+              We design medical tools with humility, knowing that doctors treat patients while ultimate healing comes from above.
             </p>
           </div>
         </div>
@@ -83,7 +83,7 @@ export const MissionVisionValuesSection: React.FC = () => {
       <section className="py-20 bg-slate-50 dark:bg-[#030318] text-slate-900 dark:text-slate-100 transition-colors border-t border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#FF6600]">Guiding Philosophy</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#FF6600]">What We Stand For</span>
             <h2 className="text-3xl font-extrabold font-heading text-[#000066] dark:text-white">
               Our Core Values
             </h2>
