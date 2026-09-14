@@ -40,9 +40,6 @@ export const ProblemStoryteller: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#FF6600] px-3 py-1 rounded-full bg-[#FF6600]/10 border border-[#FF6600]/20">
-            The Healthcare Fragmentation Problem
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-[#000066] dark:text-white">
             A patient&apos;s journey shouldn&apos;t mean <span className="heading-accent">starting over</span> at every clinic.
           </h2>

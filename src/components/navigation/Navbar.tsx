@@ -76,6 +76,7 @@ export const Navbar: React.FC = () => {
                     href="/hospital/login"
                     onClick={() => setLoginDropdownOpen(false)}
                     className="flex items-center gap-3 px-3 py-2 rounded-lg text-xs hover:bg-[#000066] transition-colors"
+                    target='blank'
                   >
                     <Hospital className="w-4 h-4 text-[#FF6600]" />
                     <div>

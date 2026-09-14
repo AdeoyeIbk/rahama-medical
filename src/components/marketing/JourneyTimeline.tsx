@@ -48,9 +48,6 @@ export const JourneyTimeline: React.FC = () => {
     <section className="py-24 bg-slate-50 dark:bg-[#030318] text-slate-900 dark:text-slate-100 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#FF6600] px-3 py-1 rounded-full bg-[#FF6600]/10 border border-[#FF6600]/20">
-            How Rahama Works
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-[#000066] dark:text-white">
             The 6-Step <span className="heading-accent">Patient Journey</span>
           </h2>

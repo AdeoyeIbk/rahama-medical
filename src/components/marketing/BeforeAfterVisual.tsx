@@ -12,9 +12,6 @@ export const BeforeAfterVisual: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#000066] dark:text-blue-300 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800">
-            System Transformation
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-[#000066] dark:text-white">
             One Record. Every Hospital. <span className="heading-accent">Total Patient Control.</span>
           </h2>

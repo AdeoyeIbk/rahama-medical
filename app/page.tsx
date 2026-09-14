@@ -29,9 +29,6 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#FF6600] px-3 py-1 rounded-full bg-[#FF6600]/10 border border-[#FF6600]/20">
-                  About Rahama Digital Health
-                </span>
                 <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-[#000066] dark:text-white">
                   Creating a connected healthcare ecosystem where medical records move <span className="heading-accent">with the patient.</span>
                 </h2>
