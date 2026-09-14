@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "../ui/Button";
+import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import {
   ArrowRight,
   Hospital,
@@ -13,11 +14,11 @@ import {
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-[#000066] text-white pt-12 pb-24 lg:pt-20 lg:pb-32">
-      {/* Background Graphic Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+    <section className="relative overflow-hidden bg-[#000066] text-white pt-12 pb-24 lg:pt-20 lg:pb-32 min-h-[600px]">
+      {/* Interactive Background Box Ripple Effect */}
+      <BackgroundRippleEffect rows={10} cols={30} cellSize={50} />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pointer-events-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Hero Messaging */}
           <motion.div
@@ -26,12 +27,12 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 space-y-6 text-left"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-blue-200 text-xs font-medium border border-white/10">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-blue-200 text-xs font-medium border border-white/10 backdrop-blur-md">
               <span className="w-2 h-2 rounded-full bg-[#FF6600] animate-pulse" />
               Simple, Connected Healthcare for Everyone
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading leading-tight tracking-tight text-white">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading leading-tight tracking-tight text-white drop-shadow-md">
               Your medical history should{" "}
               <span className="heading-accent text-white">
                 follow you anywhere.
@@ -56,7 +57,7 @@ export const Hero: React.FC = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-blue-300 text-white hover:bg-white/10"
+                  className="border-blue-300 text-white hover:bg-white/10 backdrop-blur-md"
                 >
                   See How It Works
                 </Button>
@@ -106,7 +107,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="lg:col-span-5"
           >
-            <div className="relative rounded-2xl bg-slate-900/80 border border-blue-800/80 p-6 shadow-2xl backdrop-blur-xl">
+            <div className="relative rounded-2xl bg-slate-900/85 border border-blue-800/80 p-6 shadow-2xl backdrop-blur-xl">
               <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-500" />
