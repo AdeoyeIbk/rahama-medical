@@ -5,12 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "../ui/Button";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
-import {
-  ArrowRight,
-  Hospital,
-  UserCheck,
-  Lock,
-} from "@phosphor-icons/react";
+import { ArrowRight, Hospital, UserCheck, Lock } from "@phosphor-icons/react";
 
 export const Hero: React.FC = () => {
   return (
@@ -27,11 +22,6 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 space-y-6 text-left"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-blue-200 text-xs font-medium border border-white/10 backdrop-blur-md">
-              <span className="w-2 h-2 rounded-full bg-[#FF6600] animate-pulse" />
-              Simple, Connected Healthcare for Everyone
-            </div>
-
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading leading-tight tracking-tight text-white drop-shadow-md">
               Your medical history should{" "}
               <span className="heading-accent text-white">
@@ -40,7 +30,9 @@ export const Hero: React.FC = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-blue-100 font-normal leading-relaxed max-w-2xl">
-              Imagine moving to a new city, walking into a hospital, and the doctor already knows your medical background—no lost paper files, no paying for the same test twice, and zero starting from scratch.
+              Imagine moving to a new city, walking into a hospital, and the
+              doctor already knows your medical background—no lost paper files,
+              no paying for the same test twice, and zero starting from scratch.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-4">
@@ -79,7 +71,9 @@ export const Hero: React.FC = () => {
                 <p className="text-2xl sm:text-3xl font-extrabold text-[#FF6600] font-heading">
                   100%
                 </p>
-                <p className="text-xs text-blue-200 mt-0.5">You Own Your Data</p>
+                <p className="text-xs text-blue-200 mt-0.5">
+                  You Own Your Data
+                </p>
               </div>
               <div>
                 <p className="text-2xl sm:text-3xl font-extrabold text-white font-heading">
@@ -93,9 +87,7 @@ export const Hero: React.FC = () => {
                 <p className="text-2xl sm:text-3xl font-extrabold text-[#FF6600] font-heading">
                   Bank-Grade
                 </p>
-                <p className="text-xs text-blue-200 mt-0.5">
-                  Private & Secure
-                </p>
+                <p className="text-xs text-blue-200 mt-0.5">Private & Secure</p>
               </div>
             </div>
           </motion.div>
@@ -115,7 +107,8 @@ export const Hero: React.FC = () => {
                   <div className="w-3 h-3 rounded-full bg-emerald-500" />
                 </div>
                 <span className="text-[11px] font-mono text-slate-400 flex items-center gap-1">
-                  <Lock className="w-3 h-3 text-[#FF6600]" /> Your Rahama Health Passport
+                  <Lock className="w-3 h-3 text-[#FF6600]" /> Your Rahama Health
+                  Passport
                 </span>
               </div>
 
@@ -144,7 +137,8 @@ export const Hero: React.FC = () => {
                       Registered Hospital
                     </span>
                     <span className="font-semibold text-blue-100 flex items-center gap-1">
-                      <Hospital className="w-3.5 h-3.5 text-[#FF6600]" /> LUTH, Lagos
+                      <Hospital className="w-3.5 h-3.5 text-[#FF6600]" /> LUTH,
+                      Lagos
                     </span>
                   </div>
                   <div>
