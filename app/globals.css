@@ -120,6 +120,22 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   animation: cell-ripple var(--duration, 400ms) ease-out var(--delay, 0ms) 1;
 }
 
+/* Button Click Ripple Animations */
+@keyframes button-ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+.animate-button-ripple {
+  animation: button-ripple 600ms cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
 /* Custom Scrollbars */
 ::-webkit-scrollbar {
   width: 8px;
@@ -138,3 +154,32 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-orange);
 }
+
+/* Strategic Royal Blue Aura Gradients & Glows (Ref Design) */
+.hero-radial-aura {
+  background: radial-gradient(115% 90% at 50% 0%, #0837ad 0%, #114ee8 30%, #3b76f6 52%, #eaf2ff 78%, #ffffff 98%);
+}
+
+.footer-radial-aura {
+  background: radial-gradient(125% 100% at 50% 100%, #041d63 0%, #0837ad 30%, #114ee8 55%, #eaf2ff 85%, #ffffff 100%);
+}
+
+.hero-phone-shadow {
+  box-shadow: 0 30px 70px -15px rgba(8, 55, 173, 0.24), 0 12px 28px -6px rgba(8, 55, 173, 0.12);
+}
+
+.hero-phone-shadow-elevated {
+  box-shadow: 0 35px 80px -15px rgba(8, 55, 173, 0.32), 0 16px 36px -8px rgba(8, 55, 173, 0.16);
+}
+
+.card-soft-shadow {
+  box-shadow: 0 12px 32px -8px rgba(15, 23, 42, 0.06), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+

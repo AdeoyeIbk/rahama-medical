@@ -1,120 +1,127 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { WarningCircle, ArrowRight, ShieldCheck, FileText, Prohibit } from '@phosphor-icons/react';
+import { ArrowRight, ShieldCheck, FileText, Prohibit, WarningCircle } from '@phosphor-icons/react';
 
 export const ProblemStoryteller: React.FC = () => {
   const cards = [
     {
       id: 'hosp-a',
-      step: '1. Hospital #1 (Lagos)',
+      step: 'Case 01 • Lagos Clinic',
       title: 'Your files stay locked on their computer',
       description: 'You get treated at a clinic in Lagos. But your lab tests, prescriptions, and doctor notes stay locked inside their computer. When you leave, nothing comes with you.',
       impact: 'You leave with paper receipts or nothing at all',
-      icon: <FileText className="w-8 h-8 text-amber-500" />,
-      badge: 'Files Left Behind'
+      icon: <FileText className="w-7 h-7 text-amber-600" />,
+      iconBg: 'bg-amber-50 border-amber-200/60'
     },
     {
       id: 'hosp-b',
-      step: '2. Hospital #2 (Abuja)',
+      step: 'Case 02 • Abuja Hospital',
       title: 'The new doctor has to guess and re-test',
       description: 'Months later in Abuja, you fall sick and visit a new doctor. Because they cannot see your past medical history, you end up paying for the exact same blood test all over again.',
       impact: 'Wasted money and delayed treatment',
-      icon: <Prohibit className="w-8 h-8 text-red-500" />,
-      badge: 'Paying Twice'
+      icon: <Prohibit className="w-7 h-7 text-red-600" />,
+      iconBg: 'bg-red-50 border-red-200/60'
     },
     {
       id: 'hosp-c',
-      step: '3. Hospital #3 (Emergency)',
+      step: 'Case 03 • Emergency Care',
       title: 'In an emergency, doctors don\'t know your allergies',
       description: 'If you\'re rushed to a hospital in an emergency, doctors won\'t know if you\'re allergic to penicillin or taking daily heart medicine. They have to make quick guesses.',
       impact: 'Dangerous medical mistakes',
-      icon: <WarningCircle className="w-8 h-8 text-red-600" />,
-      badge: 'High Risk'
+      icon: <WarningCircle className="w-7 h-7 text-rose-600" />,
+      iconBg: 'bg-rose-50 border-rose-200/60'
     }
   ];
 
   return (
-    <section className="py-24 bg-slate-50 dark:bg-[#030318] text-slate-900 dark:text-slate-100 transition-colors">
+    <section className="py-24 sm:py-32 bg-white text-slate-900 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-[#000066] dark:text-white">
-            Why changing hospitals is currently a headache—and <span className="heading-accent">how we fix it.</span>
+        
+        {/* Section Header with Generous Breathing Room */}
+        <div className="max-w-3xl mb-16 sm:mb-20 space-y-4">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#0837ad] block">
+            The Healthcare Challenge
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 tracking-tight leading-tight">
+            Why changing hospitals is currently a headache—and{' '}
+            <span className="text-[#0837ad]">how we fix it.</span>
           </h2>
-          <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed pt-2">
             If you&apos;ve ever had to re-explain your whole medical history or pay for the exact same lab test twice, you already know the problem. Here&apos;s what happens today:
           </p>
         </div>
 
-        {/* Storyteller Stacked Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        {/* 3 Story Cards with Breathing Room (Reference Match) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {cards.map((card, idx) => (
             <motion.div
               key={card.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.2 }}
-              className="bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-[#000066] dark:hover:border-blue-500 transition-all duration-300 group"
+              transition={{ duration: 0.5, delay: idx * 0.15 }}
+              className="bg-white border border-slate-200/80 rounded-3xl p-8 card-soft-shadow hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-blue-200"
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold font-mono text-[#000066] dark:text-blue-300 uppercase tracking-wide">
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-xs font-mono font-bold text-[#0837ad] uppercase tracking-wider">
                     {card.step}
-                  </span>
-                  <span className="text-[11px] px-2.5 py-0.5 rounded-full font-medium bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-800">
-                    {card.badge}
                   </span>
                 </div>
 
-                <div className="mb-4">{card.icon}</div>
+                <div className={`w-14 h-14 rounded-2xl ${card.iconBg} border flex items-center justify-center mb-6`}>
+                  {card.icon}
+                </div>
 
-                <h3 className="text-xl font-bold font-heading text-slate-900 dark:text-white mb-2 group-hover:text-[#000066] dark:group-hover:text-blue-300 transition-colors">
+                <h3 className="text-xl font-bold font-heading text-slate-900 mb-3 group-hover:text-[#0837ad] transition-colors leading-snug">
                   {card.title}
                 </h3>
 
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                <p className="text-sm text-slate-600 leading-relaxed mb-6">
                   {card.description}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-red-600 dark:text-red-400 font-medium">
+              <div className="pt-5 border-t border-slate-100 flex items-center text-xs font-semibold text-rose-600">
                 <span>The result: {card.impact}</span>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Solution Bridge Banner */}
+        {/* Strategic Blue Bridge Banner (Reference Visual Element) */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 bg-[#000066] text-white rounded-2xl p-8 shadow-2xl border border-blue-900 flex flex-col md:flex-row items-center justify-between gap-6"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-16 sm:mt-20 rounded-[32px] bg-gradient-to-br from-[#0837ad] via-[#114ee8] to-[#1e58f0] text-white p-8 sm:p-12 shadow-2xl shadow-blue-900/15 border border-blue-400/30 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
         >
-          <div className="space-y-2 text-left">
-            <span className="text-xs uppercase font-bold text-[#FF6600] tracking-wider flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4" /> How Rahama Changes Everything
+          <div className="space-y-3 max-w-2xl">
+            <span className="text-xs uppercase font-bold text-orange-300 tracking-wider flex items-center gap-1.5">
+              <ShieldCheck className="w-4 h-4 text-emerald-300" /> How Rahama Changes Everything
             </span>
-            <h3 className="text-2xl font-bold font-heading text-white">
+            <h3 className="text-2xl sm:text-3xl font-bold font-heading text-white leading-tight">
               Rahama connects the dots so your medical story goes wherever you go.
             </h3>
-            <p className="text-sm text-blue-100 max-w-2xl">
+            <p className="text-sm sm:text-base text-blue-100/90 leading-relaxed">
               Hospitals don&apos;t need to change their computers or buy new software. Rahama works quietly in the background so your doctor gets the full picture—only when you give permission.
             </p>
           </div>
 
-          <a href="/solution" className="shrink-0">
-            <button className="bg-[#FF6600] hover:bg-[#e65c00] text-white font-semibold text-sm px-6 py-3 rounded-lg flex items-center gap-2 shadow-md transition-all">
+          <Link href="/solution" className="shrink-0">
+            <span className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[#0837ad] font-semibold text-sm sm:text-base shadow-lg hover:bg-blue-50 transition-all hover:scale-105 active:scale-95">
               <span>See How Rahama Works</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </a>
+              <ArrowRight className="w-4 h-4 text-[#0837ad]" />
+            </span>
+          </Link>
         </motion.div>
+
       </div>
     </section>
   );
 };
+

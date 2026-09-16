@@ -2,112 +2,230 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ShieldPlus, Globe, Lock, Heartbeat } from '@phosphor-icons/react';
+import {
+  ShieldPlus,
+  Globe,
+  Lock,
+  Heartbeat,
+  EnvelopeSimple,
+  Phone,
+  MapPin,
+  XLogo,
+  LinkedinLogo,
+  InstagramLogo,
+  FacebookLogo,
+  YoutubeLogo,
+} from '@phosphor-icons/react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#00004d] text-slate-300 border-t border-[#1a1a80] pt-16 pb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-          {/* Col 1: Brand & Tagline */}
-          <div className="md:col-span-2 space-y-4">
+    <footer className="footer-radial-aura relative text-slate-100 pt-16 sm:pt-24 pb-12 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Giant Fading Watermark Brand Typography on top of Navigation */}
+        <div className="w-full text-center select-none pointer-events-none pb-6 sm:pb-10 overflow-hidden">
+          <span className="text-[17vw] sm:text-[15vw] lg:text-[175px] font-black font-heading tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-b from-[#0837ad]/25 via-[#114ee8]/20 to-white/10 uppercase block">
+            RAHAMA
+          </span>
+        </div>
+
+        {/* Main Navigation & Details Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-14">
+          
+          {/* Col 1 & 2: Brand & Mission */}
+          <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#FF6600] flex items-center justify-center text-white">
+              <div className="w-10 h-10 rounded-xl bg-[#0837ad] flex items-center justify-center text-white shadow-md">
                 <ShieldPlus className="w-6 h-6 weight-bold" />
               </div>
               <span className="text-xl font-bold font-heading tracking-tight text-white">
                 RAHAMA <span className="text-[#FF6600]">DIGITAL HEALTH</span>
               </span>
             </Link>
+
             <p className="text-base font-semibold text-white">
               Continuity of care, without borders.
             </p>
-            <p className="text-xs text-slate-400 max-w-md leading-relaxed">
+
+            <p className="text-xs text-blue-100/80 max-w-sm leading-relaxed">
               Rahama Digital Health sits between participating healthcare facilities to enable patients to securely own and share authorized medical records across Africa while protecting provider autonomy.
             </p>
-            <div className="pt-2 flex items-center gap-2 text-xs text-amber-400 font-medium">
+
+            <div className="pt-1 flex items-center gap-2 text-xs text-amber-300 font-medium">
               <Heartbeat className="w-4 h-4 text-[#FF6600]" />
               <span>Brand Principle: &ldquo;We treat, only God heals.&rdquo;</span>
             </div>
+
+            {/* Social Media Links */}
+            <div className="pt-3">
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-blue-200 block mb-2.5">
+                Connect With Us
+              </span>
+              <div className="flex items-center gap-2.5">
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X (formerly Twitter)"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white transition-transform hover:scale-110"
+                >
+                  <XLogo className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white transition-transform hover:scale-110"
+                >
+                  <LinkedinLogo className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white transition-transform hover:scale-110"
+                >
+                  <InstagramLogo className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white transition-transform hover:scale-110"
+                >
+                  <FacebookLogo className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white transition-transform hover:scale-110"
+                >
+                  <YoutubeLogo className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
           </div>
 
-          {/* Col 2: Navigation */}
+          {/* Col 3: Navigation */}
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-wider text-white font-heading mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white font-heading mb-4">
               Platform Navigation
             </h4>
-            <ul className="space-y-2.5 text-xs">
+            <ul className="space-y-2.5 text-xs text-blue-100/90">
               <li>
-                <Link href="/" className="hover:text-[#FF6600] transition-colors">
+                <Link href="/" className="hover:text-white transition-colors">
                   Home Overview
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-[#FF6600] transition-colors">
+                <Link href="/about" className="hover:text-white transition-colors">
                   About Rahama
                 </Link>
               </li>
               <li>
-                <Link href="/solution" className="hover:text-[#FF6600] transition-colors">
+                <Link href="/solution" className="hover:text-white transition-colors">
                   Solution & Architecture
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-[#FF6600] transition-colors">
+                <Link href="/contact" className="hover:text-white transition-colors">
                   Contact & Partnerships
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Role Portals & Trust */}
+          {/* Col 4: Role Access & Portals */}
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-wider text-white font-heading mb-4">
-              Role Access & Security
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white font-heading mb-4">
+              Role Access & Portals
             </h4>
-            <ul className="space-y-2.5 text-xs">
+            <ul className="space-y-2.5 text-xs text-blue-100/90">
               <li>
-                <Link href="/hospital/login" className="hover:text-[#FF6600] transition-colors flex items-center gap-1.5">
-                  <Globe className="w-3.5 h-3.5 text-blue-400" />
+                <Link href="/hospital/login" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <Globe className="w-3.5 h-3.5 text-blue-300" />
                   Hospital Administration
                 </Link>
               </li>
               <li>
-                <Link href="/provider/login" className="hover:text-[#FF6600] transition-colors flex items-center gap-1.5">
-                  <Heartbeat className="w-3.5 h-3.5 text-emerald-400" />
-                  Healthcare Practitioner Portal
+                <Link href="/provider/login" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <Heartbeat className="w-3.5 h-3.5 text-emerald-300" />
+                  Healthcare Practitioner
                 </Link>
               </li>
               <li>
-                <Link href="/patient/login" className="hover:text-[#FF6600] transition-colors flex items-center gap-1.5">
-                  <Lock className="w-3.5 h-3.5 text-[#FF6600]" />
+                <Link href="/patient/login" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <Lock className="w-3.5 h-3.5 text-orange-300" />
                   Patient Rahama ID Portal
                 </Link>
               </li>
               <li>
-                <Link href="/solution#security" className="hover:text-[#FF6600] transition-colors">
+                <Link href="/solution#security" className="hover:text-white transition-colors">
                   Security & NDPA Compliance
                 </Link>
               </li>
             </ul>
           </div>
+
+          {/* Col 5: Contact Us */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white font-heading mb-4">
+              Contact Us
+            </h4>
+            <div className="space-y-3 text-xs text-blue-100/90">
+              <div className="flex items-start gap-2.5">
+                <EnvelopeSimple className="w-4 h-4 text-orange-300 shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-[10px] text-blue-200 block font-medium">Inquiries & Partnerships</span>
+                  <a href="mailto:partners@rahamadigital.com" className="hover:text-white transition-colors">
+                    partners@rahamadigital.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2.5">
+                <Phone className="w-4 h-4 text-emerald-300 shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-[10px] text-blue-200 block font-medium">Facility Onboarding Hotline</span>
+                  <a href="tel:+234800724262" className="hover:text-white transition-colors">
+                    +234 800 RAHAMA (724262)
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-blue-300 shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-[10px] text-blue-200 block font-medium">Regional Hubs</span>
+                  <p className="text-slate-300">Lagos & Abuja, Nigeria</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        {/* Bottom bar */}
-        <div className="pt-8 border-t border-blue-900/60 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        {/* Bottom Bar without harsh border */}
+        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-blue-200/80 gap-4">
           <p>© {new Date().getFullYear()} Rahama Digital Health Infrastructure Ltd. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link href="/contact" className="hover:text-slate-200">
+            <Link href="/contact" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/contact" className="hover:text-slate-200">
+            <Link href="/contact" className="hover:text-white transition-colors">
               Terms of Service
             </Link>
-            <Link href="/contact" className="hover:text-slate-200">
+            <Link href="/contact" className="hover:text-white transition-colors">
               Security Practices
             </Link>
           </div>
         </div>
+
       </div>
     </footer>
   );
