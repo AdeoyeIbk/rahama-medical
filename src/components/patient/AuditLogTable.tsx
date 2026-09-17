@@ -29,7 +29,7 @@ export const AuditLogTable: React.FC<AuditLogTableProps> = ({ auditLogs }) => {
                 <td className="p-3 font-mono text-slate-500">{new Date(log.timestamp).toLocaleString()}</td>
                 <td className="p-3 font-bold">{log.accessedBy} ({log.accessorRole})</td>
                 <td className="p-3">{log.accessorFacility}</td>
-                <td className="p-3 font-mono text-[#FF6600] font-semibold">{log.action}</td>
+                <td className="p-3 font-mono text-[#0837ad] dark:text-blue-400 font-semibold">{log.action}</td>
                 <td className="p-3 text-slate-600 dark:text-slate-400">{log.details}</td>
               </tr>
             ))}

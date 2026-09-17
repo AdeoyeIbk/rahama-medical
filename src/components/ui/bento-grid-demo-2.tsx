@@ -38,8 +38,8 @@ const items = [
     className: "md:col-span-2",
     icon: (
       <div className="flex items-center justify-between w-full">
-        <div className="p-2 rounded-lg bg-orange-500/10 text-[#FF6600]">
-          <UserPlus className="h-5 w-5 text-[#FF6600]" />
+        <div className="p-2 rounded-lg bg-blue-500/10 text-[#0837ad] dark:text-blue-400">
+          <UserPlus className="h-5 w-5 text-[#0837ad] dark:text-blue-400" />
         </div>
         <span className="text-2xl font-black font-heading text-slate-300 dark:text-slate-700">01</span>
       </div>
@@ -66,7 +66,7 @@ const items = [
     className: "md:col-span-1",
     icon: (
       <div className="flex items-center justify-between w-full">
-        <div className="p-2 rounded-lg bg-orange-500/10 text-[#FF6600]">
+        <div className="p-2 rounded-lg bg-blue-500/10 text-[#0837ad] dark:text-blue-400">
           <Lock className="h-5 w-5" />
         </div>
         <span className="text-2xl font-black font-heading text-slate-300 dark:text-slate-700">03</span>
@@ -94,7 +94,7 @@ const items = [
     className: "md:col-span-2",
     icon: (
       <div className="flex items-center justify-between w-full">
-        <div className="p-2 rounded-lg bg-orange-500/10 text-[#FF6600]">
+        <div className="p-2 rounded-lg bg-blue-500/10 text-[#0837ad] dark:text-blue-400">
           <Pulse className="h-5 w-5" />
         </div>
         <span className="text-2xl font-black font-heading text-slate-300 dark:text-slate-700">05</span>

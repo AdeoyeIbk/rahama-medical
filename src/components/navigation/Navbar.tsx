@@ -3,9 +3,10 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldPlus, List, X, LockKey, Hospital, UserGear, Heartbeat, CaretDown } from '@phosphor-icons/react';
+import { List, X, LockKey, Hospital, UserGear, Heartbeat, CaretDown } from '@phosphor-icons/react';
 
 export const Navbar: React.FC = () => {
   const pathname = usePathname();
@@ -43,8 +44,15 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-[#0837ad] flex items-center justify-center text-white shadow-md transition-transform group-hover:scale-105">
-              <ShieldPlus className="w-6 h-6 weight-bold" />
+            <div className="w-10 h-10 rounded-xl bg-[#0837ad] flex items-center justify-center p-1.5 shadow-md transition-transform group-hover:scale-105 overflow-hidden">
+              <Image
+                src="/rahama-logo-white.png"
+                alt="Rahama Digital Health Logo"
+                width={36}
+                height={36}
+                className="w-full h-full object-contain"
+                priority
+              />
             </div>
             <div className="flex flex-col text-left justify-center">
               <span className="text-lg font-black font-heading tracking-tight text-slate-900 leading-tight">
@@ -171,8 +179,14 @@ export const Navbar: React.FC = () => {
                 {/* Top Bar inside Overlay */}
                 <div className="flex items-center justify-between shrink-0 pb-5 border-b border-slate-100">
                   <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-[#0837ad] flex items-center justify-center text-white shadow-md">
-                      <ShieldPlus className="w-6 h-6 weight-bold" />
+                    <div className="w-10 h-10 rounded-xl bg-[#0837ad] flex items-center justify-center p-1.5 shadow-md overflow-hidden">
+                      <Image
+                        src="/rahama-logo-white.png"
+                        alt="Rahama Digital Health Logo"
+                        width={36}
+                        height={36}
+                        className="w-full h-full object-contain"
+                      />
                     </div>
                     <div className="flex flex-col text-left justify-center">
                       <span className="text-lg font-black font-heading tracking-tight text-slate-900 leading-tight">

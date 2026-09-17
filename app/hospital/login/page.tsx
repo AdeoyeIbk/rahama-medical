@@ -2,32 +2,33 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Card } from '@/components/ui/Card';
 import { authService } from '@/services/auth.service';
-import { ShieldPlus, Hospital, ArrowRight, LockKey } from '@phosphor-icons/react';
+import { Hospital, ArrowRight, LockKey } from '@phosphor-icons/react';
 
 export default function HospitalLoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState('contact@luth.gov.ng');
   const [password, setPassword] = useState('password123');
+  const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    setError('');
+    setError(null);
 
-    const res = await authService.hospitalLogin(email, password);
-    setIsLoading(false);
-
-    if (res.success) {
+    try {
+      await authService.login(email, password, 'hospital');
       router.push('/hospital/dashboard');
-    } else {
-      setError(res.error || 'Authentication failed');
+    } catch (err: any) {
+      setError(err.message || 'Failed to authenticate');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -40,19 +41,31 @@ export default function HospitalLoginPage() {
         {/* Brand header */}
         <div className="text-center space-y-2">
           <Link href="/" className="inline-flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#FF6600] flex items-center justify-center text-white font-bold shadow-lg">
-              <ShieldPlus className="w-6 h-6" />
+            <div className="w-11 h-11 rounded-2xl bg-[#0837ad] flex items-center justify-center p-1.5 shadow-lg border border-blue-400/20 overflow-hidden">
+              <Image
+                src="/rahama-logo-white.png"
+                alt="Rahama Digital Health Logo"
+                width={40}
+                height={40}
+                className="w-full h-full object-contain"
+                priority
+              />
             </div>
-            <span className="text-xl font-bold font-heading tracking-tight text-white">
-              RAHAMA <span className="text-[#FF6600]">HOSPITAL</span>
-            </span>
+            <div className="flex flex-col text-left justify-center">
+              <span className="text-xl font-bold font-heading tracking-tight text-white leading-tight">
+                RAHAMA <span className="text-blue-300">HOSPITAL</span>
+              </span>
+              <span className="text-[10px] font-bold tracking-widest text-blue-400 uppercase leading-none">
+                DIGITAL HEALTH
+              </span>
+            </div>
           </Link>
           <p className="text-xs text-blue-200">Facility Administration & Interoperability Portal</p>
         </div>
 
         <Card className="bg-slate-900/90 border-slate-800 p-8 shadow-2xl backdrop-blur-xl text-slate-100 space-y-6">
           <div className="flex items-center gap-3 pb-4 border-b border-slate-800">
-            <div className="p-2.5 rounded-xl bg-blue-950 text-[#FF6600]">
+            <div className="p-2.5 rounded-xl bg-blue-950 text-blue-400">
               <Hospital className="w-6 h-6" />
             </div>
             <div>
@@ -93,7 +106,7 @@ export default function HospitalLoginPage() {
 
           <div className="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
             <span>New healthcare facility?</span>
-            <Link href="/hospital/register" className="text-[#FF6600] font-semibold hover:underline flex items-center gap-1">
+            <Link href="/hospital/register" className="text-blue-400 font-semibold hover:underline flex items-center gap-1">
               Apply for Verification <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

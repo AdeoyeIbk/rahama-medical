@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
-  ShieldPlus,
   Globe,
   Lock,
   Heartbeat,
@@ -33,9 +33,15 @@ export const Footer: React.FC = () => {
           
           {/* Col 1 & 2: Brand & Mission */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-white text-[#0837ad] flex items-center justify-center shadow-md">
-                <ShieldPlus className="w-6 h-6 weight-bold" />
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center p-1.5 shadow-md transition-transform group-hover:scale-105 overflow-hidden">
+                <Image
+                  src="/rahama-logo-blue.png"
+                  alt="Rahama Digital Health Logo"
+                  width={36}
+                  height={36}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="flex flex-col text-left justify-center">
                 <span className="text-lg font-black font-heading tracking-tight text-white leading-tight">

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -13,7 +14,6 @@ import {
   FileText,
   CheckCircle,
   Pulse,
-  ShieldPlus,
   Eye
 } from "@phosphor-icons/react";
 import { Highlight } from "@/components/ui/hero-highlight";
@@ -247,7 +247,13 @@ export const Hero: React.FC = () => {
                       
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-1.5 text-[9px] tracking-wider uppercase font-bold text-blue-200">
-                          <ShieldPlus className="w-3.5 h-3.5 text-blue-300" />
+                          <Image
+                            src="/rahama-logo-white.png"
+                            alt="Rahama Logo"
+                            width={16}
+                            height={16}
+                            className="w-4 h-4 object-contain"
+                          />
                           <span>Rahama Universal ID</span>
                         </div>
                         <span className="text-[9px] bg-blue-500/20 text-blue-200 px-2 py-0.5 rounded-full font-mono border border-blue-400/30">
@@ -320,7 +326,13 @@ export const Hero: React.FC = () => {
                   {/* Bottom Dock */}
                   <div className="pt-2 border-t border-slate-800/80 flex items-center justify-around text-slate-400 text-xs">
                     <div className="text-blue-400 flex flex-col items-center">
-                      <ShieldPlus className="w-4 h-4" />
+                      <Image
+                        src="/rahama-logo-white.png"
+                        alt="Passport"
+                        width={16}
+                        height={16}
+                        className="w-4 h-4 object-contain"
+                      />
                       <span className="text-[8px] mt-0.5">Passport</span>
                     </div>
                     <div className="hover:text-white flex flex-col items-center">

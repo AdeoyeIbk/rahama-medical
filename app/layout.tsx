@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     siteName: 'Rahama Digital Health',
     type: 'website',
   },
+  icons: {
+    icon: '/rahama-logo-blue.png',
+    apple: '/rahama-logo-blue.png',
+  },
 };
 
 export default function RootLayout({

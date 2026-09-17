@@ -26,7 +26,7 @@ export const AuthorizedMedicalHistoryList: React.FC<AuthorizedMedicalHistoryList
           <div key={rec.id} className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 space-y-2 text-xs">
             <div className="flex items-center justify-between text-[10px] font-mono text-slate-400">
               <span>{new Date(rec.recordedAt).toLocaleDateString()}</span>
-              <span className="text-[#FF6600] font-bold">{rec.category}</span>
+              <span className="text-[#0837ad] dark:text-blue-400 font-bold">{rec.category}</span>
             </div>
             <h4 className="font-bold text-slate-900 dark:text-white text-sm">{rec.title}</h4>
             <p className="text-slate-600 dark:text-slate-300">{rec.summary}</p>

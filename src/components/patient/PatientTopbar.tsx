@@ -22,7 +22,7 @@ export const PatientTopbar: React.FC<PatientTopbarProps> = ({ patient }) => {
       </div>
 
       <div className="flex items-center gap-3">
-        <Badge variant="orange" size="sm">
+        <Badge variant="blue" size="sm">
           <ShieldCheck className="w-3.5 h-3.5" /> 100% Patient Controlled
         </Badge>
       </div>

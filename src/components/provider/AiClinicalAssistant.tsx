@@ -48,7 +48,7 @@ export const AiClinicalAssistant: React.FC<AiClinicalAssistantProps> = ({
     <Card className="p-6 space-y-4 border-2 border-blue-200 dark:border-blue-900">
       <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
         <div className="flex items-center gap-2">
-          <div className="p-2 rounded-lg bg-[#FF6600]/10 text-[#FF6600]">
+          <div className="p-2 rounded-lg bg-[#0837ad]/10 text-[#0837ad] dark:text-blue-400">
             <Sparkle className="w-5 h-5" />
           </div>
           <div>
@@ -58,7 +58,7 @@ export const AiClinicalAssistant: React.FC<AiClinicalAssistantProps> = ({
             <p className="text-xs text-slate-500">Simulates consultation listening & drafts SOAP note</p>
           </div>
         </div>
-        <Badge variant="orange" size="sm">Human Approval Required</Badge>
+        <Badge variant="blue" size="sm">Human Approval Required</Badge>
       </div>
 
       <div className="space-y-1.5">
@@ -146,8 +146,8 @@ export const AiClinicalAssistant: React.FC<AiClinicalAssistantProps> = ({
           </div>
 
           <div className="p-4 rounded-xl bg-slate-900 text-white space-y-3">
-            <div className="flex items-center gap-2 text-xs text-amber-300 font-semibold">
-              <ShieldCheck className="w-4 h-4 text-[#FF6600]" />
+            <div className="flex items-center gap-2 text-xs text-blue-300 font-semibold">
+              <ShieldCheck className="w-4 h-4 text-sky-400" />
               <span>Safeguard: AI notes are never saved automatically. Doctor review & signature required.</span>
             </div>
 

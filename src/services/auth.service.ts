@@ -11,7 +11,9 @@ export interface AuthSession {
 export interface AuthService {
   hospitalLogin(email: string, pass: string): Promise<ApiResponse<AuthSession>>;
   providerLogin(licenseId: string, pass: string): Promise<ApiResponse<AuthSession>>;
+  doctorLogin(licenseId: string, pass: string): Promise<ApiResponse<AuthSession>>;
   patientLogin(healthIdOrPhone: string, pin: string): Promise<ApiResponse<AuthSession>>;
+  login(identifier: string, pass: string, role?: string): Promise<ApiResponse<AuthSession>>;
   logout(): Promise<void>;
   getCurrentSession(role: UserRole): AuthSession | null;
 }
@@ -59,6 +61,20 @@ class MockAuthServiceImpl implements AuthService {
         resolve({ success: true, data: session });
       }, 400);
     });
+  }
+
+  doctorLogin(licenseId: string, pass: string): Promise<ApiResponse<AuthSession>> {
+    return this.providerLogin(licenseId, pass);
+  }
+
+  login(identifier: string, pass: string, role?: string): Promise<ApiResponse<AuthSession>> {
+    if (role === 'hospital') {
+      return this.hospitalLogin(identifier, pass);
+    }
+    if (role === 'provider' || role === 'doctor') {
+      return this.providerLogin(identifier, pass);
+    }
+    return this.patientLogin(identifier, pass);
   }
 
   patientLogin(healthIdOrPhone: string, pin: string): Promise<ApiResponse<AuthSession>> {

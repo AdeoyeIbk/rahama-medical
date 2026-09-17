@@ -2,12 +2,13 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Card } from '@/components/ui/Card';
 import { authService } from '@/services/auth.service';
-import { ShieldPlus, Heartbeat, LockKey } from '@phosphor-icons/react';
+import { Heartbeat, LockKey } from '@phosphor-icons/react';
 
 export default function ProviderLoginPage() {
   const router = useRouter();
@@ -19,12 +20,9 @@ export default function ProviderLoginPage() {
     e.preventDefault();
     setIsLoading(true);
 
-    const res = await authService.providerLogin(licenseId, password);
+    await authService.doctorLogin(licenseId, password);
     setIsLoading(false);
-
-    if (res.success) {
-      router.push('/provider/dashboard');
-    }
+    router.push('/provider/dashboard');
   };
 
   return (
@@ -32,12 +30,24 @@ export default function ProviderLoginPage() {
       <div className="w-full max-w-md relative z-10 space-y-6">
         <div className="text-center space-y-2">
           <Link href="/" className="inline-flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#FF6600] flex items-center justify-center text-white font-bold">
-              <ShieldPlus className="w-6 h-6" />
+            <div className="w-11 h-11 rounded-2xl bg-[#0837ad] flex items-center justify-center p-1.5 shadow-lg border border-blue-400/20 overflow-hidden">
+              <Image
+                src="/rahama-logo-white.png"
+                alt="Rahama Digital Health Logo"
+                width={40}
+                height={40}
+                className="w-full h-full object-contain"
+                priority
+              />
             </div>
-            <span className="text-xl font-bold font-heading tracking-tight text-white">
-              RAHAMA <span className="text-[#FF6600]">DOCTOR & PROVIDER</span>
-            </span>
+            <div className="flex flex-col text-left justify-center">
+              <span className="text-xl font-bold font-heading tracking-tight text-white leading-tight">
+                RAHAMA <span className="text-blue-300">DOCTOR & PROVIDER</span>
+              </span>
+              <span className="text-[10px] font-bold tracking-widest text-blue-400 uppercase leading-none">
+                DIGITAL HEALTH
+              </span>
+            </div>
           </Link>
           <p className="text-xs text-blue-200">Clinical Record Lookup & AI Documentation Portal</p>
         </div>

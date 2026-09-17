@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import { ShieldCheck, LockKey, Hospital, UserCheck } from "@phosphor-icons/react";
 
@@ -14,8 +15,14 @@ export default function MacbookScrollDemo() {
           {/* Header Bar */}
           <div className="flex items-center justify-between pb-2 border-b border-blue-900/60">
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded bg-[#FF6600] flex items-center justify-center text-white text-xs font-bold">
-                RH
+              <div className="w-6 h-6 rounded-md bg-[#0837ad] flex items-center justify-center p-0.5 overflow-hidden shrink-0">
+                <Image
+                  src="/rahama-logo-white.png"
+                  alt="Rahama Logo"
+                  width={20}
+                  height={20}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-xs font-bold font-heading text-white">RAHAMA PATIENT PORTAL</span>
             </div>
@@ -27,13 +34,13 @@ export default function MacbookScrollDemo() {
           {/* Patient Card Banner */}
           <div className="bg-[#00004d] p-3 rounded-lg border border-blue-800 flex items-center justify-between">
             <div>
-              <span className="text-[8px] uppercase font-bold text-[#FF6600] tracking-wider block">Universal Health ID</span>
+              <span className="text-[8px] uppercase font-bold text-sky-400 tracking-wider block">Universal Health ID</span>
               <h4 className="text-sm font-bold text-white font-heading">Amina Ibrahim Bello</h4>
               <p className="text-[10px] font-mono text-blue-200">RH-8492-9102-NG • O+ • AA</p>
             </div>
             <div className="text-right">
               <span className="text-[9px] text-slate-300 block">Home Hospital</span>
-              <span className="text-[10px] font-semibold text-orange-300 flex items-center gap-1">
+              <span className="text-[10px] font-semibold text-blue-300 flex items-center gap-1">
                 <Hospital className="w-3 h-3" /> LUTH Lagos
               </span>
             </div>
@@ -46,7 +53,7 @@ export default function MacbookScrollDemo() {
             <div className="p-2 bg-slate-900/90 rounded border border-slate-800 text-[10px] space-y-0.5">
               <div className="flex items-center justify-between text-blue-300 font-bold">
                 <span>Asthma Spirometry Evaluation</span>
-                <span className="text-[#FF6600] text-[8px] font-mono">LUTH Lagos • 10 Aug 2026</span>
+                <span className="text-blue-300 text-[8px] font-mono">LUTH Lagos • 10 Aug 2026</span>
               </div>
               <p className="text-slate-300 text-[9px]">Lungs clear bilaterally. Peak flow 420 L/min. Inhaler technique confirmed compliant.</p>
             </div>
@@ -54,7 +61,7 @@ export default function MacbookScrollDemo() {
             <div className="p-2 bg-slate-900/90 rounded border border-slate-800 text-[10px] space-y-0.5">
               <div className="flex items-center justify-between text-blue-300 font-bold">
                 <span>Chest Radiograph (PA View)</span>
-                <span className="text-[#FF6600] text-[8px] font-mono">Reddington Hospital • 18 May 2026</span>
+                <span className="text-blue-300 text-[8px] font-mono">Reddington Hospital • 18 May 2026</span>
               </div>
               <p className="text-slate-300 text-[9px]">High-resolution PA radiograph. No pulmonary edema or hilar opacity.</p>
             </div>

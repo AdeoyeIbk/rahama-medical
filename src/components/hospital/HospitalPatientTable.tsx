@@ -48,7 +48,7 @@ export const HospitalPatientTable: React.FC<HospitalPatientTableProps> = ({
                 <td className="p-3 text-slate-600 dark:text-slate-400">{pat.phone}</td>
                 <td className="p-3">{pat.homeHospitalName || hospitalName}</td>
                 <td className="p-3">
-                  <span className="text-[11px] text-[#FF6600] font-semibold hover:underline cursor-pointer">
+                  <span className="text-[11px] text-[#0837ad] dark:text-blue-400 font-semibold hover:underline cursor-pointer">
                     View Profile
                   </span>
                 </td>

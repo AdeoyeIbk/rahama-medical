@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Hospital as HospitalIcon, ChartBar, Users, ArrowsLeftRight, Clock, SignOut } from '@phosphor-icons/react';
 import { Hospital } from '@/types';
 
@@ -21,8 +22,14 @@ export const HospitalSidebar: React.FC<HospitalSidebarProps> = ({
     <aside className="w-64 bg-[#00004d] text-white flex flex-col justify-between p-4 hidden md:flex border-r border-blue-900/60 shrink-0">
       <div className="space-y-6">
         <div className="flex items-center gap-3 px-2">
-          <div className="w-8 h-8 rounded-lg bg-[#FF6600] flex items-center justify-center text-white font-bold">
-            <HospitalIcon className="w-5 h-5" />
+          <div className="w-9 h-9 rounded-xl bg-[#0837ad] flex items-center justify-center p-1 text-white shadow-md overflow-hidden shrink-0">
+            <Image
+              src="/rahama-logo-white.png"
+              alt="Rahama Logo"
+              width={32}
+              height={32}
+              className="w-full h-full object-contain"
+            />
           </div>
           <div>
             <h2 className="text-sm font-bold font-heading text-white tracking-tight">HOSPITAL PORTAL</h2>
@@ -34,7 +41,7 @@ export const HospitalSidebar: React.FC<HospitalSidebarProps> = ({
           <button
             onClick={() => setActiveTab('overview')}
             className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-xs font-medium transition-colors ${
-              activeTab === 'overview' ? 'bg-[#FF6600] text-white font-semibold' : 'text-blue-100 hover:bg-white/5'
+              activeTab === 'overview' ? 'bg-[#0837ad] text-white font-semibold' : 'text-blue-100 hover:bg-white/5'
             }`}
           >
             <ChartBar className="w-4 h-4" /> Overview & Analytics
@@ -42,7 +49,7 @@ export const HospitalSidebar: React.FC<HospitalSidebarProps> = ({
           <button
             onClick={() => setActiveTab('patients')}
             className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-xs font-medium transition-colors ${
-              activeTab === 'patients' ? 'bg-[#FF6600] text-white font-semibold' : 'text-blue-100 hover:bg-white/5'
+              activeTab === 'patients' ? 'bg-[#0837ad] text-white font-semibold' : 'text-blue-100 hover:bg-white/5'
             }`}
           >
             <Users className="w-4 h-4" /> Patient Roster & Intake
@@ -50,7 +57,7 @@ export const HospitalSidebar: React.FC<HospitalSidebarProps> = ({
           <button
             onClick={() => setActiveTab('referrals')}
             className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-xs font-medium transition-colors ${
-              activeTab === 'referrals' ? 'bg-[#FF6600] text-white font-semibold' : 'text-blue-100 hover:bg-white/5'
+              activeTab === 'referrals' ? 'bg-[#0837ad] text-white font-semibold' : 'text-blue-100 hover:bg-white/5'
             }`}
           >
             <ArrowsLeftRight className="w-4 h-4" /> Secure Referrals
@@ -58,7 +65,7 @@ export const HospitalSidebar: React.FC<HospitalSidebarProps> = ({
           <button
             onClick={() => setActiveTab('followups')}
             className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-xs font-medium transition-colors ${
-              activeTab === 'followups' ? 'bg-[#FF6600] text-white font-semibold' : 'text-blue-100 hover:bg-white/5'
+              activeTab === 'followups' ? 'bg-[#0837ad] text-white font-semibold' : 'text-blue-100 hover:bg-white/5'
             }`}
           >
             <Clock className="w-4 h-4" /> Follow-Up Scheduler
