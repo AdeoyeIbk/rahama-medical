@@ -10,7 +10,7 @@ export const Card: React.FC<CardProps> = ({ className, children, accentBorder = 
     <div
       className={cn(
         'rounded-xl border bg-[var(--card)] text-[var(--card-foreground)] p-6 shadow-sm transition-all duration-200',
-        accentBorder && 'border-t-4 border-t-[#FF6600]',
+        accentBorder && 'border-t-4 border-t-[#0837ad]',
         className
       )}
       {...props}

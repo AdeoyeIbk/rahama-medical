@@ -19,40 +19,44 @@ import {
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="footer-radial-aura relative text-slate-100 pt-16 sm:pt-24 pb-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        {/* Giant Fading Watermark Brand Typography on top of Navigation */}
-        <div className="w-full text-center select-none pointer-events-none pb-6 sm:pb-10 overflow-hidden">
-          <span className="text-[17vw] sm:text-[15vw] lg:text-[175px] font-black font-heading tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-b from-[#0837ad]/25 via-[#114ee8]/20 to-white/10 uppercase block">
-            RAHAMA
-          </span>
-        </div>
+    <footer className="footer-radial-aura relative text-white pt-16 sm:pt-20 pb-12 overflow-hidden">
+      {/* Giant Bold Watermark Brand Typography Fitting Entire Screen */}
+      <div className="w-full overflow-hidden text-center select-none pointer-events-none pb-4 sm:pb-8">
+        <span className="text-[22vw] font-black font-heading tracking-tighter leading-none text-white/20 select-none drop-shadow-sm uppercase block w-full">
+          RAHAMA
+        </span>
+      </div>
 
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-16 lg:px-32 relative z-10">
         {/* Main Navigation & Details Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-14">
           
           {/* Col 1 & 2: Brand & Mission */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#0837ad] flex items-center justify-center text-white shadow-md">
+              <div className="w-10 h-10 rounded-xl bg-white text-[#0837ad] flex items-center justify-center shadow-md">
                 <ShieldPlus className="w-6 h-6 weight-bold" />
               </div>
-              <span className="text-xl font-bold font-heading tracking-tight text-white">
-                RAHAMA <span className="text-[#FF6600]">DIGITAL HEALTH</span>
-              </span>
+              <div className="flex flex-col text-left justify-center">
+                <span className="text-lg font-black font-heading tracking-tight text-white leading-tight">
+                  RAHAMA
+                </span>
+                <span className="text-[10px] font-bold tracking-widest text-blue-200 uppercase leading-none">
+                  DIGITAL HEALTH
+                </span>
+              </div>
             </Link>
 
-            <p className="text-base font-semibold text-white">
+            <p className="text-base sm:text-lg font-bold text-white tracking-tight">
               Continuity of care, without borders.
             </p>
 
-            <p className="text-xs text-blue-100/80 max-w-sm leading-relaxed">
+            <p className="text-sm text-blue-50 max-w-sm leading-relaxed font-normal">
               Rahama Digital Health sits between participating healthcare facilities to enable patients to securely own and share authorized medical records across Africa while protecting provider autonomy.
             </p>
 
-            <div className="pt-1 flex items-center gap-2 text-xs text-amber-300 font-medium">
-              <Heartbeat className="w-4 h-4 text-[#FF6600]" />
+            <div className="pt-1 flex items-center gap-2 text-xs sm:text-sm text-blue-200 font-medium">
+              <Heartbeat className="w-4 h-4 text-blue-300 shrink-0" />
               <span>Brand Principle: &ldquo;We treat, only God heals.&rdquo;</span>
             </div>
 
@@ -154,13 +158,13 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link href="/provider/login" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <Heartbeat className="w-3.5 h-3.5 text-emerald-300" />
+                  <Heartbeat className="w-3.5 h-3.5 text-blue-300" />
                   Healthcare Practitioner
                 </Link>
               </li>
               <li>
                 <Link href="/patient/login" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <Lock className="w-3.5 h-3.5 text-orange-300" />
+                  <Lock className="w-3.5 h-3.5 text-blue-300" />
                   Patient Rahama ID Portal
                 </Link>
               </li>
@@ -179,7 +183,7 @@ export const Footer: React.FC = () => {
             </h4>
             <div className="space-y-3 text-xs text-blue-100/90">
               <div className="flex items-start gap-2.5">
-                <EnvelopeSimple className="w-4 h-4 text-orange-300 shrink-0 mt-0.5" />
+                <EnvelopeSimple className="w-4 h-4 text-blue-300 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-[10px] text-blue-200 block font-medium">Inquiries & Partnerships</span>
                   <a href="mailto:partners@rahamadigital.com" className="hover:text-white transition-colors">
@@ -189,7 +193,7 @@ export const Footer: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-emerald-300 shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-blue-300 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-[10px] text-blue-200 block font-medium">Facility Onboarding Hotline</span>
                   <a href="tel:+234800724262" className="hover:text-white transition-colors">
@@ -202,7 +206,7 @@ export const Footer: React.FC = () => {
                 <MapPin className="w-4 h-4 text-blue-300 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-[10px] text-blue-200 block font-medium">Regional Hubs</span>
-                  <p className="text-slate-300">Lagos & Abuja, Nigeria</p>
+                  <p className="text-blue-100">Lagos & Abuja, Nigeria</p>
                 </div>
               </div>
             </div>

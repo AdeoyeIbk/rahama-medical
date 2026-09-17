@@ -25,15 +25,11 @@ export default function HomePage() {
 
         {/* 3. About Rahama Healthcare Ecosystem Section (Full-bleed alternating bg-[#f3f7fd]) */}
         <section className="py-24 sm:py-32 bg-[#f3f7fd] text-slate-900 transition-colors">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[1600px] mx-auto px-6 sm:px-16 lg:px-32">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               
               {/* Left Column: Mission & Value Proposition */}
               <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#0837ad] block">
-                  Healthcare Infrastructure
-                </span>
-
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 tracking-tight leading-tight">
                   Creating a connected healthcare ecosystem where medical records move{' '}
                   <span className="text-[#0837ad]">with the patient.</span>
@@ -44,7 +40,7 @@ export default function HomePage() {
                 </p>
 
                 <div className="p-6 rounded-3xl bg-white border border-slate-200/80 text-sm font-medium text-slate-700 flex items-start gap-4 card-soft-shadow">
-                  <Heartbeat className="w-7 h-7 text-[#FF6600] shrink-0 mt-0.5" />
+                  <Heartbeat className="w-7 h-7 text-[#0837ad] shrink-0 mt-0.5" />
                   <div className="space-y-1 leading-relaxed">
                     <span className="font-bold text-slate-900 block font-heading text-base">
                       B2B2C Infrastructure Model
@@ -89,13 +85,13 @@ export default function HomePage() {
                 {/* 2. Patients Card */}
                 <div className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 card-soft-shadow hover:shadow-xl transition-all duration-300">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-orange-50 text-[#FF6600] border border-orange-100 flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#0837ad] border border-blue-100 flex items-center justify-center shrink-0">
                       <UserCheck className="w-6 h-6" />
                     </div>
                     <div className="space-y-1.5 flex-1">
                       <div className="flex items-center justify-between">
                         <h4 className="font-bold text-lg font-heading text-slate-900">Patients & Families</h4>
-                        <span className="text-[11px] font-mono font-semibold text-[#FF6600]">Primary Beneficiaries</span>
+                        <span className="text-[11px] font-mono font-semibold text-[#0837ad]">Primary Beneficiaries</span>
                       </div>
                       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                         Lifelong digital identity, complete ownership of medical history, and granular phone-based consent control over every record access.
@@ -107,13 +103,13 @@ export default function HomePage() {
                 {/* 3. Doctors Card */}
                 <div className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 card-soft-shadow hover:shadow-xl transition-all duration-300">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#0837ad] border border-blue-100 flex items-center justify-center shrink-0">
                       <Heartbeat className="w-6 h-6" />
                     </div>
                     <div className="space-y-1.5 flex-1">
                       <div className="flex items-center justify-between">
                         <h4 className="font-bold text-lg font-heading text-slate-900">Physicians & Specialists</h4>
-                        <span className="text-[11px] font-mono font-semibold text-emerald-600">Care Continuity</span>
+                        <span className="text-[11px] font-mono font-semibold text-[#0837ad]">Care Continuity</span>
                       </div>
                       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                         Full clinical background on intake, zero repeat diagnostic tests, and AI-assisted clinical consultation note generation.
@@ -137,7 +133,7 @@ export default function HomePage() {
         <SecuritySection />
 
         {/* 7. Strong Final CTA Banner (Reference-Matched Rounded Card on alternating bg-[#f3f7fd]) */}
-        <section className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 bg-[#f3f7fd]">
+        <section className="py-24 sm:py-32 px-6 sm:px-16 lg:px-32 bg-[#f3f7fd]">
           <div className="max-w-6xl mx-auto rounded-[36px] sm:rounded-[44px] bg-gradient-to-br from-[#0837ad] via-[#0b3dc4] to-[#041d63] text-white p-10 sm:p-16 text-center space-y-8 shadow-2xl shadow-blue-900/15 border border-blue-400/20 relative overflow-hidden">
             
             {/* Ambient Lighting */}

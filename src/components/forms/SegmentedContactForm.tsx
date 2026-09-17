@@ -1,10 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Card } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
-import { Button } from '@/components/ui/Button';
-import { Warning, CheckCircle, Hospital, User, Heartbeat, Newspaper } from '@phosphor-icons/react';
+import { ShieldCheck, CheckCircle, Hospital, User, Heartbeat, Buildings } from '@phosphor-icons/react';
 
 type StakeholderType = 'HOSPITAL_ADMIN' | 'DOCTOR' | 'PATIENT' | 'PRESS';
 
@@ -27,33 +25,38 @@ export const SegmentedContactForm: React.FC = () => {
   };
 
   const roles = [
-    { id: 'HOSPITAL_ADMIN', label: 'Hospital Administrator', icon: <Hospital className="w-5 h-5 text-[#000066] dark:text-blue-300" /> },
-    { id: 'DOCTOR', label: 'Doctor / Provider', icon: <Heartbeat className="w-5 h-5 text-emerald-500" /> },
-    { id: 'PATIENT', label: 'Patient / Public', icon: <User className="w-5 h-5 text-[#FF6600]" /> },
-    { id: 'PRESS', label: 'Press / Partnerships', icon: <Newspaper className="w-5 h-5 text-purple-500" /> }
+    { id: 'HOSPITAL_ADMIN', label: 'Hospital Administrator', icon: <Hospital className="w-5 h-5 text-[#0837ad]" /> },
+    { id: 'DOCTOR', label: 'Doctor / Provider', icon: <Heartbeat className="w-5 h-5 text-[#0837ad]" /> },
+    { id: 'PATIENT', label: 'Patient / Public', icon: <User className="w-5 h-5 text-[#0837ad]" /> },
+    { id: 'PRESS', label: 'Press / Partnerships', icon: <Buildings className="w-5 h-5 text-[#0837ad]" /> }
   ];
 
   return (
-    <Card className="p-8 shadow-xl">
+    <div className="bg-white p-8 sm:p-12 rounded-3xl border border-slate-200/80 card-soft-shadow shadow-xl max-w-3xl mx-auto">
       {isSubmitted ? (
-        <div className="text-center py-12 space-y-4">
-          <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto">
+        <div className="text-center py-12 space-y-5">
+          <div className="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-200 text-[#0837ad] flex items-center justify-center mx-auto">
             <CheckCircle className="w-10 h-10" />
           </div>
-          <h3 className="text-2xl font-bold font-heading text-slate-900 dark:text-white">
+          <h3 className="text-2xl font-bold font-heading text-slate-900">
             Inquiry Submitted Successfully
           </h3>
-          <p className="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto">
+          <p className="text-sm sm:text-base text-slate-600 max-w-md mx-auto leading-relaxed">
             Thank you for reaching out. A Rahama healthcare integration specialist will review your message and get back to you within 1 business day.
           </p>
-          <Button variant="outline" onClick={() => setIsSubmitted(false)}>
-            Send Another Inquiry
-          </Button>
+          <div className="pt-2">
+            <button
+              onClick={() => setIsSubmitted(false)}
+              className="px-6 py-2.5 rounded-full border border-[#0837ad] text-[#0837ad] hover:bg-blue-50 text-sm font-semibold transition-all"
+            >
+              Send Another Inquiry
+            </button>
+          </div>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-bold text-slate-800 dark:text-slate-200 mb-3 font-heading">
+            <label className="block text-sm font-bold text-slate-900 mb-3 font-heading">
               I am a:
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -64,14 +67,14 @@ export const SegmentedContactForm: React.FC = () => {
                     key={r.id}
                     type="button"
                     onClick={() => setRole(r.id as StakeholderType)}
-                    className={`flex flex-col items-center justify-center p-3.5 rounded-xl border text-xs font-semibold transition-all ${
+                    className={`flex flex-col items-center justify-center p-4 rounded-2xl border text-xs font-semibold transition-all ${
                       active
-                        ? 'border-[#000066] dark:border-blue-500 bg-blue-50 dark:bg-slate-800 text-[#000066] dark:text-blue-300 shadow-sm'
-                        : 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-slate-400'
+                        ? 'border-[#0837ad] bg-blue-50 text-[#0837ad] shadow-sm ring-1 ring-[#0837ad]'
+                        : 'border-slate-200 bg-white text-slate-600 hover:border-blue-200 hover:bg-slate-50/50'
                     }`}
                   >
-                    <div className="mb-1">{r.icon}</div>
-                    <span>{r.label}</span>
+                    <div className="mb-2">{r.icon}</div>
+                    <span className="text-center leading-tight">{r.label}</span>
                   </button>
                 );
               })}
@@ -85,6 +88,7 @@ export const SegmentedContactForm: React.FC = () => {
               required
               value={name}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
+              className="rounded-2xl"
             />
             <Input
               label="Official Email"
@@ -93,6 +97,7 @@ export const SegmentedContactForm: React.FC = () => {
               required
               value={email}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+              className="rounded-2xl"
             />
           </div>
 
@@ -101,10 +106,11 @@ export const SegmentedContactForm: React.FC = () => {
             placeholder="09012345678"
             value={phone}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPhone(e.target.value)}
+            className="rounded-2xl"
           />
 
           <div className="space-y-1.5">
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-200">
+            <label className="block text-sm font-medium text-slate-700">
               Message / Inquiry Details
             </label>
             <textarea
@@ -113,23 +119,27 @@ export const SegmentedContactForm: React.FC = () => {
               value={message}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value)}
               placeholder="Describe your facility integration interest or partnership request..."
-              className="w-full px-3.5 py-2.5 rounded-lg border bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-[#000066]"
+              className="w-full px-4 py-3 rounded-2xl border bg-white border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0837ad] transition-all"
             />
           </div>
 
-          <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900 text-xs text-amber-800 dark:text-amber-300 flex items-start gap-3">
-            <Warning className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-            <div>
-              <strong className="block font-bold">Medical Record Privacy Notice:</strong>
+          <div className="p-4 rounded-2xl bg-blue-50/70 border border-blue-100 text-xs text-slate-600 flex items-start gap-3">
+            <ShieldCheck className="w-5 h-5 text-[#0837ad] shrink-0 mt-0.5" />
+            <div className="leading-relaxed">
+              <strong className="block font-semibold text-slate-900 mb-0.5">Medical Record Privacy Notice:</strong>
               This public contact form is an inquiry mechanism. Do not upload or paste confidential patient clinical notes, lab reports, or sensitive medical records here.
             </div>
           </div>
 
-          <Button type="submit" variant="primary" size="lg" className="w-full" isLoading={isLoading}>
-            Submit Inquiry
-          </Button>
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="w-full py-4 rounded-full bg-[#0837ad] hover:bg-[#062c8d] text-white font-semibold text-base shadow-lg shadow-blue-900/15 transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50"
+          >
+            {isLoading ? 'Submitting...' : 'Submit Inquiry'}
+          </button>
         </form>
       )}
-    </Card>
+    </div>
   );
 };

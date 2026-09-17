@@ -9,14 +9,14 @@ export const SecuritySection: React.FC = () => {
     {
       title: 'You Say Who Gets Access',
       desc: 'No doctor or hospital can look at your medical history unless you explicitly approve it on your phone.',
-      icon: <LockKey className="w-6 h-6 text-[#FF6600]" />,
-      iconBg: 'bg-orange-50 border-orange-100 text-[#FF6600]'
+      icon: <LockKey className="w-6 h-6 text-[#0837ad]" />,
+      iconBg: 'bg-blue-50 border-blue-100 text-[#0837ad]'
     },
     {
       title: 'Bank-Grade Protection',
       desc: 'Your medical files are locked with the same high-level digital security used by international financial institutions.',
-      icon: <ShieldCheck className="w-6 h-6 text-emerald-600" />,
-      iconBg: 'bg-emerald-50 border-emerald-100 text-emerald-600'
+      icon: <ShieldCheck className="w-6 h-6 text-[#0837ad]" />,
+      iconBg: 'bg-blue-50 border-blue-100 text-[#0837ad]'
     },
     {
       title: 'Complete Access History',
@@ -27,18 +27,15 @@ export const SecuritySection: React.FC = () => {
     {
       title: 'Strict Privacy Protection',
       desc: 'Built strictly according to national data privacy laws (including NDPA) so your personal information stays completely safe.',
-      icon: <Scales className="w-6 h-6 text-indigo-600" />,
-      iconBg: 'bg-indigo-50 border-indigo-100 text-indigo-600'
+      icon: <Scales className="w-6 h-6 text-[#0837ad]" />,
+      iconBg: 'bg-blue-50 border-blue-100 text-[#0837ad]'
     }
   ];
 
   return (
     <section className="py-24 sm:py-32 bg-white text-slate-900 transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-16 lg:px-32">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0837ad] block">
-            Bank-Grade Trust & Compliance
-          </span>
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 tracking-tight leading-tight">
             Your privacy is <span className="text-[#0837ad]">100% in your hands.</span>

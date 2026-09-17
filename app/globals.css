@@ -8,13 +8,13 @@
   --border: #e2e8f0;
   --input: #e2e8f0;
   
-  /* Brand System Tokens */
-  --primary-navy: #000066;
-  --primary-navy-dark: #00004d;
-  --primary-navy-light: #1a1a80;
-  --accent-orange: #ff6600;
-  --accent-orange-hover: #e65c00;
-  --accent-orange-light: #fff0e6;
+  /* Brand System Tokens - Strictly Royal Blue, Sky Blue & White */
+  --primary-navy: #0837ad;
+  --primary-navy-dark: #052370;
+  --primary-navy-light: #114ee8;
+  --accent-orange: #60a5fa;
+  --accent-orange-hover: #3b82f6;
+  --accent-orange-light: #eff6ff;
 
   --font-bricolage: 'Bricolage Grotesque', sans-serif;
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -28,10 +28,10 @@
   --border: #1e1e4a;
   --input: #1e1e4a;
 
-  --primary-navy: #000066;
-  --accent-orange: #ff6600;
-  --accent-orange-hover: #ff771a;
-  --accent-orange-light: rgba(255, 102, 0, 0.15);
+  --primary-navy: #0837ad;
+  --accent-orange: #60a5fa;
+  --accent-orange-hover: #3b82f6;
+  --accent-orange-light: rgba(96, 165, 250, 0.15);
 }
 
 @theme inline {
@@ -40,12 +40,12 @@
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-border: var(--border);
-  --color-navy: #000066;
-  --color-navy-dark: #00004d;
-  --color-navy-light: #1a1a80;
-  --color-orange-accent: #ff6600;
-  --color-orange-hover: #e65c00;
-  --color-orange-light: #fff0e6;
+  --color-navy: #0837ad;
+  --color-navy-dark: #052370;
+  --color-navy-light: #114ee8;
+  --color-orange-accent: #60a5fa;
+  --color-orange-hover: #3b82f6;
+  --color-orange-light: #eff6ff;
   --font-heading: var(--font-bricolage);
 }
 
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   letter-spacing: -0.02em;
 }
 
-/* Signature Orange Block Heading Motif */
+/* Subtle Sky-Blue Underline Motif */
 .heading-accent {
   position: relative;
   display: inline-block;
@@ -76,14 +76,14 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   bottom: 0.1em;
   left: 0;
   width: 100%;
-  height: 0.3em;
-  background-color: var(--accent-orange);
-  opacity: 0.85;
+  height: 0.28em;
+  background-color: #93c5fd;
+  opacity: 0.45;
   z-index: -1;
   border-radius: 2px;
 }
 
-/* Duotone Navy Shadow & warm highlights for clinical media */
+/* Duotone Navy Shadow for clinical media */
 .navy-duotone {
   position: relative;
   filter: contrast(1.05) saturate(0.9);
@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,102,0.4) 0%, rgba(255,102,0,0.08) 100%);
+  background: linear-gradient(135deg, rgba(8,55,173,0.3) 0%, rgba(96,165,250,0.05) 100%);
   mix-blend-mode: multiply;
   pointer-events: none;
 }
@@ -102,12 +102,12 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 @keyframes cell-ripple {
   0% {
     opacity: 1;
-    background-color: rgba(255, 102, 0, 0.4);
+    background-color: rgba(8, 55, 173, 0.3);
     transform: scale(0.95);
   }
   50% {
     opacity: 0.8;
-    background-color: rgba(255, 102, 0, 0.6);
+    background-color: rgba(8, 55, 173, 0.5);
     transform: scale(1.15);
   }
   100% {
@@ -147,12 +147,12 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00006640;
+  background: #0837ad30;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-orange);
+  background: #0837ad;
 }
 
 /* Strategic Royal Blue Aura Gradients & Glows (Ref Design) */
@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .footer-radial-aura {
-  background: radial-gradient(125% 100% at 50% 100%, #041d63 0%, #0837ad 30%, #114ee8 55%, #eaf2ff 85%, #ffffff 100%);
+  background: linear-gradient(180deg, #052370 0%, #0837ad 20%, #052370 60%, #02133f 100%);
 }
 
 .hero-phone-shadow {

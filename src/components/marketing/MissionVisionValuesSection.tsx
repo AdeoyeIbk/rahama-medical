@@ -1,103 +1,156 @@
+'use client';
+
 import React from 'react';
-import { Heartbeat, ShieldCheck, Globe, Scales, LockKey } from '@phosphor-icons/react/dist/ssr';
+import { motion } from 'framer-motion';
+import { Heartbeat, ShieldCheck, Globe, Scales, LockKey, Target, Eye, HandHeart } from '@phosphor-icons/react';
 
 export const MissionVisionValuesSection: React.FC = () => {
+  const pillars = [
+    {
+      label: 'Our Mission',
+      icon: <Target className="w-6 h-6 text-[#0837ad]" />,
+      title: 'Your Medical Story Travels With You',
+      desc: 'To connect hospitals across Africa so patients never have to start over, repeat costly lab tests, or lose critical medical background when visiting a new doctor.'
+    },
+    {
+      label: 'Our Vision',
+      icon: <Globe className="w-6 h-6 text-[#0837ad]" />,
+      title: 'One Connected Health Network',
+      desc: 'An Africa where anyone can walk into any hospital and receive instant, safe, high-quality care without record barriers or administrative friction.'
+    },
+    {
+      label: 'Our Purpose',
+      icon: <HandHeart className="w-6 h-6 text-[#0837ad]" />,
+      title: 'Putting Patients First',
+      desc: 'Making healthcare simpler, safer, and more affordable for everyday families while treating every individual with respect, privacy, and dignity.'
+    }
+  ];
+
   const values = [
     {
       title: 'Honesty & Transparency',
-      desc: 'We are completely open about how your data is protected and who gets to see it. No fine print.',
-      icon: <ShieldCheck className="w-6 h-6 text-[#FF6600]" />
+      desc: 'We are completely transparent about how health data is protected and who gets to see it. Zero hidden fine print.',
+      icon: <ShieldCheck className="w-6 h-6 text-[#0837ad]" />
     },
     {
-      title: 'Compassion',
-      desc: 'Healthcare technology should make life easier for patients and doctors, reducing stress and paperwork.',
-      icon: <Heartbeat className="w-6 h-6 text-[#000066] dark:text-blue-300" />
+      title: 'Compassion & Care',
+      desc: 'Healthcare technology should relieve stress for patients and clinical staff, eliminating redundant paperwork.',
+      icon: <Heartbeat className="w-6 h-6 text-[#0837ad]" />
     },
     {
-      title: 'Safety First',
-      desc: 'Your medical files are locked behind strict security, ensuring only authorized doctors can ever view them.',
-      icon: <LockKey className="w-6 h-6 text-[#FF6600]" />
+      title: 'Safety & Encryption First',
+      desc: 'Medical files are guarded with bank-grade encryption, ensuring only patient-approved doctors can ever view them.',
+      icon: <LockKey className="w-6 h-6 text-[#0837ad]" />
     },
     {
-      title: 'Reliability',
-      desc: 'We build strong, dependable systems that hospitals and clinics can rely on 24 hours a day, 7 days a week.',
-      icon: <Globe className="w-6 h-6 text-[#000066] dark:text-blue-300" />
+      title: 'Resilient Reliability',
+      desc: 'We build durable digital infrastructure that hospitals and clinics can rely upon 24 hours a day, 365 days a year.',
+      icon: <Globe className="w-6 h-6 text-[#0837ad]" />
     },
     {
       title: 'Humility & Responsibility',
-      desc: 'We serve with respect and humility, honoring the trust placed in us by everyday families and doctors.',
-      icon: <Scales className="w-6 h-6 text-[#FF6600]" />
+      desc: 'We serve with respect and integrity, honoring the profound trust placed in us by everyday families and physicians.',
+      icon: <Scales className="w-6 h-6 text-[#0837ad]" />
+    },
+    {
+      title: 'Patient-First Ownership',
+      desc: 'Every medical record belongs unequivocally to the patient, never sold, monetized, or locked away.',
+      icon: <Eye className="w-6 h-6 text-[#0837ad]" />
     }
   ];
 
   return (
     <>
-      <section className="py-20 bg-white dark:bg-[#080829] text-slate-900 dark:text-slate-100 transition-colors">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 1. Mission, Vision, Purpose Section (White Background, Consistent Cards) */}
+      <section className="py-24 sm:py-32 bg-white text-slate-900 transition-colors">
+        <div className="max-w-[1600px] mx-auto px-6 sm:px-16 lg:px-32">
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#FF6600]">Our Mission</span>
-              <h3 className="text-2xl font-bold font-heading text-[#000066] dark:text-white">
-                Your Medical Story Travels With You
-              </h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                To connect hospitals across Africa so patients never have to start over or re-pay for tests when visiting a new doctor.
-              </p>
-            </div>
+            {pillars.map((item, idx) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                className="bg-[#f8fafc] hover:bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 hover:border-blue-200 card-soft-shadow hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-6">
+                    {item.icon}
+                  </div>
+                  <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#0837ad] block mb-2">
+                    {item.label}
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 mb-3 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
 
-            <div className="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#000066] dark:text-blue-400">Our Vision</span>
-              <h3 className="text-2xl font-bold font-heading text-[#000066] dark:text-white">
-                One Connected Health Network
-              </h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                A world where anyone can walk into any hospital and receive instant, safe, high-quality care without record barriers.
-              </p>
-            </div>
-
-            <div className="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Our Purpose</span>
-              <h3 className="text-2xl font-bold font-heading text-[#000066] dark:text-white">
-                Putting Patients First
-              </h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                Making healthcare simpler, safer, and cheaper for everyday families while treating every person with respect and dignity.
+          {/* Foundation Quote Banner (Card matching Homepage CTA) */}
+          <div className="mt-20 max-w-5xl mx-auto rounded-[36px] sm:rounded-[44px] bg-gradient-to-br from-[#0837ad] via-[#0b3dc4] to-[#041d63] text-white p-10 sm:p-16 text-center space-y-6 shadow-2xl shadow-blue-900/15 border border-blue-400/20 relative overflow-hidden">
+            <div className="absolute top-0 right-1/4 w-80 h-80 bg-blue-400/20 blur-[80px] rounded-full pointer-events-none" />
+            
+            <div className="relative z-10 space-y-4 max-w-2xl mx-auto">
+              <span className="text-xs font-mono uppercase tracking-widest text-blue-200 block">
+                Our Foundation
+              </span>
+              <blockquote className="text-2xl sm:text-4xl font-extrabold font-heading italic tracking-tight text-white leading-tight">
+                &ldquo;We treat, only God heals.&rdquo;
+              </blockquote>
+              <p className="text-sm sm:text-base text-blue-100/90 leading-relaxed">
+                We design medical tools with humility, knowing that physicians provide dedicated care while ultimate healing comes from above.
               </p>
             </div>
           </div>
 
-          <div className="mt-16 bg-[#000066] text-white rounded-2xl p-8 border border-blue-900 text-center space-y-3 shadow-xl">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#FF6600]">
-              Our Foundation
-            </span>
-            <blockquote className="text-2xl sm:text-3xl font-extrabold font-heading italic">
-              &ldquo;We treat, only God heals.&rdquo;
-            </blockquote>
-            <p className="text-xs text-blue-200 max-w-lg mx-auto">
-              We design medical tools with humility, knowing that doctors treat patients while ultimate healing comes from above.
-            </p>
-          </div>
         </div>
       </section>
 
-      <section className="py-20 bg-slate-50 dark:bg-[#030318] text-slate-900 dark:text-slate-100 transition-colors border-t border-slate-200 dark:border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#FF6600]">What We Stand For</span>
-            <h2 className="text-3xl font-extrabold font-heading text-[#000066] dark:text-white">
-              Our Core Values
+      {/* 2. Core Values Section (Alternating bg-[#f3f7fd]) */}
+      <section className="py-24 sm:py-32 bg-[#f3f7fd] text-slate-900 transition-colors">
+        <div className="max-w-[1600px] mx-auto px-6 sm:px-16 lg:px-32">
+          
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 tracking-tight leading-tight">
+              Principles that guide <span className="text-[#0837ad]">every line of code.</span>
             </h2>
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+              The foundational standards that ensure patients remain protected and healthcare providers remain empowered.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {values.map((v) => (
-              <div key={v.title} className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-2">
-                <div className="p-3 bg-slate-100 dark:bg-slate-800 rounded-xl w-fit">{v.icon}</div>
-                <h4 className="text-lg font-bold font-heading text-slate-900 dark:text-white">{v.title}</h4>
-                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">{v.desc}</p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {values.map((v, idx) => (
+              <motion.div
+                key={v.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.08 }}
+                className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 hover:border-blue-200 card-soft-shadow hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-[#0837ad]">
+                    {v.icon}
+                  </div>
+                  <h4 className="text-lg font-bold font-heading text-slate-900 mb-2 leading-snug">
+                    {v.title}
+                  </h4>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {v.desc}
+                  </p>
+                </div>
+              </motion.div>
             ))}
           </div>
+
         </div>
       </section>
     </>

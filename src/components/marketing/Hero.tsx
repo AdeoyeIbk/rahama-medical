@@ -16,6 +16,7 @@ import {
   ShieldPlus,
   Eye
 } from "@phosphor-icons/react";
+import { Highlight } from "@/components/ui/hero-highlight";
 
 export const Hero: React.FC = () => {
   return (
@@ -25,7 +26,7 @@ export const Hero: React.FC = () => {
       <div className="absolute top-24 left-10 w-80 h-80 bg-blue-300/15 blur-[90px] pointer-events-none rounded-full" />
       <div className="absolute top-24 right-10 w-80 h-80 bg-indigo-300/15 blur-[90px] pointer-events-none rounded-full" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-6 sm:px-16 lg:px-32 flex flex-col items-center text-center">
         
         {/* 1. Main Hero Headline (Preserving current copy & type) */}
         <motion.h1
@@ -35,9 +36,9 @@ export const Hero: React.FC = () => {
           className="text-4xl sm:text-5xl lg:text-6xl xl:text-[64px] font-extrabold font-heading text-white tracking-tight leading-[1.12] max-w-4xl mx-auto"
         >
           Your medical history should{" "}
-          <span className="relative inline-block text-white">
+          <Highlight className="text-white bg-gradient-to-r from-blue-600 via-blue-500 to-sky-400 dark:from-blue-600 dark:via-blue-500 dark:to-sky-400 px-2.5 py-0.5 rounded-xl">
             follow you anywhere.
-          </span>
+          </Highlight>
         </motion.h1>
 
         {/* 2. Subheadline with Generous Breathing Space */}
@@ -100,7 +101,7 @@ export const Hero: React.FC = () => {
           className="mt-9 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-xs sm:text-sm text-blue-100/90"
         >
           <div className="flex items-center gap-2">
-            <UserCheck className="w-4 h-4 text-[#FF6600]" />
+            <UserCheck className="w-4 h-4 text-blue-200" />
             <span><strong className="text-white font-bold">100%</strong> You Own Your Data</span>
           </div>
           <div className="flex items-center gap-2">
@@ -108,7 +109,7 @@ export const Hero: React.FC = () => {
             <span><strong className="text-white font-bold">Zero</strong> Extra Work for Hospitals</span>
           </div>
           <div className="flex items-center gap-2">
-            <LockKey className="w-4 h-4 text-emerald-300" />
+            <LockKey className="w-4 h-4 text-blue-200" />
             <span><strong className="text-white font-bold">Bank-Grade</strong> Private & Secure</span>
           </div>
         </motion.div>
@@ -139,7 +140,7 @@ export const Hero: React.FC = () => {
                     {/* App Header */}
                     <div className="flex items-center justify-between pb-2 border-b border-slate-800">
                       <span className="font-semibold text-[11px] text-slate-300">Your Insights</span>
-                      <span className="text-[9px] text-emerald-400 bg-emerald-500/15 px-2 py-0.5 rounded-full">
+                      <span className="text-[9px] text-blue-300 bg-blue-500/15 px-2 py-0.5 rounded-full">
                         Live Sync
                       </span>
                     </div>
@@ -173,7 +174,7 @@ export const Hero: React.FC = () => {
                       </div>
 
                       <div className="bg-blue-950/60 p-2.5 rounded-xl border border-blue-800/50">
-                        <span className="text-[9px] uppercase font-bold text-[#FF6600] block">Vitals Summary</span>
+                        <span className="text-[9px] uppercase font-bold text-blue-300 block">Vitals Summary</span>
                         <div className="grid grid-cols-2 gap-1 mt-1 text-[9px] text-slate-300">
                           <div>BP: <strong className="text-white">120/80</strong></div>
                           <div>Pulse: <strong className="text-white">72 bpm</strong></div>
@@ -185,7 +186,7 @@ export const Hero: React.FC = () => {
                   {/* Bottom Status Bar */}
                   <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[9px] text-slate-400">
                     <span className="flex items-center gap-1">
-                      <ShieldCheck className="w-3 h-3 text-emerald-400" /> Fully Encrypted
+                      <ShieldCheck className="w-3 h-3 text-blue-300" /> Fully Encrypted
                     </span>
                     <span>RH-NG</span>
                   </div>
@@ -207,7 +208,7 @@ export const Hero: React.FC = () => {
                 <div className="h-7 bg-slate-950 flex items-center justify-between px-6 pt-1">
                   <span className="text-[10px] font-medium text-slate-300">9:41</span>
                   <div className="w-20 h-4 bg-black rounded-full flex items-center justify-end px-1.5">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="w-2 h-2 rounded-full bg-blue-400" />
                   </div>
                   <div className="flex items-center gap-1 text-[10px] text-slate-300">
                     <span>5G</span>
@@ -226,7 +227,7 @@ export const Hero: React.FC = () => {
                         <img
                           src="/amina-avatar.jpg"
                           alt="Amina Ibrahim Bello"
-                          className="w-10 h-10 rounded-full object-cover border-2 border-orange-400/80 shadow-md shrink-0"
+                          className="w-10 h-10 rounded-full object-cover border-2 border-blue-400/80 shadow-md shrink-0"
                         />
                         <div>
                           <span className="text-[10px] text-slate-400 block">Universal Health Passport</span>
@@ -236,20 +237,20 @@ export const Hero: React.FC = () => {
                         </div>
                       </div>
                       <div className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-slate-300">
-                        <QrCode className="w-4 h-4 text-[#FF6600]" />
+                        <QrCode className="w-4 h-4 text-blue-300" />
                       </div>
                     </div>
 
                     {/* The Signature Rahama Health ID Card */}
-                    <div className="relative rounded-2xl bg-gradient-to-br from-[#0a3bb8] to-[#041d63] p-4 border border-blue-400/30 shadow-lg text-white mb-4 overflow-hidden">
+                    <div className="relative rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 border border-blue-400/30 shadow-lg text-white mb-4 overflow-hidden">
                       <div className="absolute top-0 right-0 -mr-6 -mt-6 w-24 h-24 bg-blue-400/20 rounded-full blur-xl pointer-events-none" />
                       
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-1.5 text-[9px] tracking-wider uppercase font-bold text-blue-200">
-                          <ShieldPlus className="w-3.5 h-3.5 text-[#FF6600]" />
+                          <ShieldPlus className="w-3.5 h-3.5 text-blue-300" />
                           <span>Rahama Universal ID</span>
                         </div>
-                        <span className="text-[9px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full font-mono border border-emerald-400/30">
+                        <span className="text-[9px] bg-blue-500/20 text-blue-200 px-2 py-0.5 rounded-full font-mono border border-blue-400/30">
                           Active Sync
                         </span>
                       </div>
@@ -283,10 +284,10 @@ export const Hero: React.FC = () => {
                     <div className="bg-slate-900/90 rounded-xl p-3 border border-slate-800 mb-3 space-y-2">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-1.5">
-                          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                          <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
                           <span className="text-[10px] font-semibold text-slate-200">Doctor Access Control</span>
                         </div>
-                        <span className="text-[8px] text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+                        <span className="text-[8px] text-blue-300 bg-blue-500/10 px-1.5 py-0.5 rounded">
                           You&apos;re in Charge
                         </span>
                       </div>
@@ -299,18 +300,18 @@ export const Hero: React.FC = () => {
                           />
                           <span>Dr. Okonjo (LUTH)</span>
                         </div>
-                        <span className="text-[9px] text-emerald-300 font-semibold">Approved</span>
+                        <span className="text-[9px] text-blue-200 font-semibold">Approved</span>
                       </div>
                     </div>
 
                     {/* Quick Action Grid */}
                     <div className="grid grid-cols-2 gap-2 text-[10px]">
                       <div className="bg-slate-900/60 p-2 rounded-lg border border-slate-800/60 flex items-center gap-2">
-                        <Pulse className="w-3.5 h-3.5 text-[#FF6600]" />
+                        <Pulse className="w-3.5 h-3.5 text-blue-300" />
                         <span className="text-slate-200">2 Lab Tests</span>
                       </div>
                       <div className="bg-slate-900/60 p-2 rounded-lg border border-slate-800/60 flex items-center gap-2">
-                        <LockKey className="w-3.5 h-3.5 text-blue-400" />
+                        <LockKey className="w-3.5 h-3.5 text-blue-300" />
                         <span className="text-slate-200">Bank-Grade</span>
                       </div>
                     </div>
@@ -355,7 +356,7 @@ export const Hero: React.FC = () => {
                     {/* App Header */}
                     <div className="flex items-center justify-between pb-2 border-b border-slate-800">
                       <span className="font-semibold text-[11px] text-slate-300">Access Request</span>
-                      <span className="text-[9px] text-[#FF6600] font-semibold">
+                      <span className="text-[9px] text-blue-300 font-semibold">
                         Pending OTP
                       </span>
                     </div>
@@ -379,8 +380,8 @@ export const Hero: React.FC = () => {
                       </p>
 
                       <div className="pt-2 space-y-1.5">
-                        <div className="w-full py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-[10px] text-center shadow-md flex items-center justify-center gap-1">
-                          <CheckCircle className="w-3.5 h-3.5" /> Approve 24-Hr Access
+                        <div className="w-full py-2 rounded-lg bg-[#0837ad] hover:bg-[#062c8d] text-white font-semibold text-[10px] text-center shadow-md flex items-center justify-center gap-1 cursor-pointer transition-colors">
+                          <CheckCircle className="w-3.5 h-3.5 text-blue-200" /> Approve 24-Hr Access
                         </div>
                         <div className="w-full py-1.5 rounded-lg bg-slate-800 text-slate-400 text-[9px] text-center">
                           Deny Access
@@ -394,7 +395,7 @@ export const Hero: React.FC = () => {
                         Security Audit Log
                       </span>
                       <div className="bg-slate-950/70 p-2 rounded-lg border border-slate-800 text-[9px] text-slate-300 space-y-1 font-mono">
-                        <div className="flex items-center justify-between text-emerald-400">
+                        <div className="flex items-center justify-between text-blue-300">
                           <span>✔ Access Verified</span>
                           <span className="text-[8px] text-slate-500">10:14 AM</span>
                         </div>
@@ -410,7 +411,7 @@ export const Hero: React.FC = () => {
                     <span className="flex items-center gap-1">
                       <Eye className="w-3 h-3 text-blue-400" /> Full Access History
                     </span>
-                    <span className="text-emerald-400 font-semibold">100% Private</span>
+                    <span className="text-blue-300 font-semibold">100% Private</span>
                   </div>
                 </div>
               </div>

@@ -13,8 +13,8 @@ export const ProblemStoryteller: React.FC = () => {
       title: 'Your files stay locked on their computer',
       description: 'You get treated at a clinic in Lagos. But your lab tests, prescriptions, and doctor notes stay locked inside their computer. When you leave, nothing comes with you.',
       impact: 'You leave with paper receipts or nothing at all',
-      icon: <FileText className="w-7 h-7 text-amber-600" />,
-      iconBg: 'bg-amber-50 border-amber-200/60'
+      icon: <FileText className="w-7 h-7 text-[#0837ad]" />,
+      iconBg: 'bg-blue-50 border-blue-100'
     },
     {
       id: 'hosp-b',
@@ -22,8 +22,8 @@ export const ProblemStoryteller: React.FC = () => {
       title: 'The new doctor has to guess and re-test',
       description: 'Months later in Abuja, you fall sick and visit a new doctor. Because they cannot see your past medical history, you end up paying for the exact same blood test all over again.',
       impact: 'Wasted money and delayed treatment',
-      icon: <Prohibit className="w-7 h-7 text-red-600" />,
-      iconBg: 'bg-red-50 border-red-200/60'
+      icon: <Prohibit className="w-7 h-7 text-[#0837ad]" />,
+      iconBg: 'bg-blue-50 border-blue-100'
     },
     {
       id: 'hosp-c',
@@ -31,20 +31,17 @@ export const ProblemStoryteller: React.FC = () => {
       title: 'In an emergency, doctors don\'t know your allergies',
       description: 'If you\'re rushed to a hospital in an emergency, doctors won\'t know if you\'re allergic to penicillin or taking daily heart medicine. They have to make quick guesses.',
       impact: 'Dangerous medical mistakes',
-      icon: <WarningCircle className="w-7 h-7 text-rose-600" />,
-      iconBg: 'bg-rose-50 border-rose-200/60'
+      icon: <WarningCircle className="w-7 h-7 text-[#0837ad]" />,
+      iconBg: 'bg-blue-50 border-blue-100'
     }
   ];
 
   return (
     <section className="py-24 sm:py-32 bg-white text-slate-900 transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-16 lg:px-32">
         
         {/* Section Header with Generous Breathing Room */}
         <div className="max-w-3xl mb-16 sm:mb-20 space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0837ad] block">
-            The Healthcare Challenge
-          </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 tracking-tight leading-tight">
             Why changing hospitals is currently a headache—and{' '}
             <span className="text-[#0837ad]">how we fix it.</span>
@@ -85,25 +82,22 @@ export const ProblemStoryteller: React.FC = () => {
                 </p>
               </div>
 
-              <div className="pt-5 border-t border-slate-100 flex items-center text-xs font-semibold text-rose-600">
+              <div className="pt-5 border-t border-slate-100 flex items-center text-xs font-semibold text-slate-700">
                 <span>The result: {card.impact}</span>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Strategic Blue Bridge Banner (Reference Visual Element) */}
+        {/* Strategic Darker Blue Bridge Banner */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 sm:mt-20 rounded-[32px] bg-gradient-to-br from-[#0837ad] via-[#114ee8] to-[#1e58f0] text-white p-8 sm:p-12 shadow-2xl shadow-blue-900/15 border border-blue-400/30 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
+          className="mt-16 sm:mt-20 rounded-[32px] bg-gradient-to-br from-[#0837ad] to-[#052370] text-white p-8 sm:p-12 shadow-xl shadow-blue-950/15 border border-blue-400/20 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
         >
           <div className="space-y-3 max-w-2xl">
-            <span className="text-xs uppercase font-bold text-orange-300 tracking-wider flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-emerald-300" /> How Rahama Changes Everything
-            </span>
             <h3 className="text-2xl sm:text-3xl font-bold font-heading text-white leading-tight">
               Rahama connects the dots so your medical story goes wherever you go.
             </h3>
