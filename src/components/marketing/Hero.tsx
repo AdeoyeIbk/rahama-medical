@@ -93,28 +93,7 @@ export const Hero: React.FC = () => {
           </Link>
         </motion.div>
 
-        {/* 4. Strategic Quick Metrics - Clean Text Only (No pills/bg/borders) */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
-          className="mt-9 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-xs sm:text-sm text-blue-100/90"
-        >
-          <div className="flex items-center gap-2">
-            <UserCheck className="w-4 h-4 text-blue-200" />
-            <span><strong className="text-white font-bold">100%</strong> You Own Your Data</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Hospital className="w-4 h-4 text-blue-200" />
-            <span><strong className="text-white font-bold">Zero</strong> Extra Work for Hospitals</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <LockKey className="w-4 h-4 text-blue-200" />
-            <span><strong className="text-white font-bold">Bank-Grade</strong> Private & Secure</span>
-          </div>
-        </motion.div>
-
-        {/* 5. The 3-Phone Flagship Mockup Showcase */}
+        {/* 4. The 3-Phone Flagship Mockup Showcase */}
         <div className="w-full mt-14 sm:mt-16 pt-4 relative flex justify-center items-end">
           
           {/* The 3 Phones Container */}
