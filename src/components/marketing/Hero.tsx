@@ -14,7 +14,7 @@ import {
   FileText,
   CheckCircle,
   Pulse,
-  Eye
+  Eye,
 } from "@phosphor-icons/react";
 import { Highlight } from "@/components/ui/hero-highlight";
 
@@ -27,7 +27,6 @@ export const Hero: React.FC = () => {
       <div className="absolute top-24 right-10 w-80 h-80 bg-indigo-300/15 blur-[90px] pointer-events-none rounded-full" />
 
       <div className="relative z-10 max-w-[1600px] mx-auto px-6 sm:px-16 lg:px-32 flex flex-col items-center text-center">
-        
         {/* 1. Main Hero Headline (Preserving current copy & type) */}
         <motion.h1
           initial={{ opacity: 0, y: 16 }}
@@ -35,9 +34,9 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-4xl sm:text-5xl lg:text-6xl xl:text-[64px] font-extrabold font-heading text-white tracking-tight leading-[1.12] max-w-4xl mx-auto"
         >
-          Your medical history should{" "}
-          <Highlight className="text-white bg-gradient-to-r from-blue-600 via-blue-500 to-sky-400 dark:from-blue-600 dark:via-blue-500 dark:to-sky-400 px-2.5 py-0.5 rounded-xl">
-            follow you anywhere.
+          Your medical history should follow you{" "}
+          <Highlight className="text-white bg-gradient-to-r from-blue-600 via-blue-500 to-sky-400 dark:from-blue-600 dark:via-blue-500 dark:to-sky-400 px-2.5 rounded-xl">
+            anywhere.
           </Highlight>
         </motion.h1>
 
@@ -48,9 +47,9 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mt-6 text-base sm:text-lg lg:text-xl text-blue-50/90 font-normal leading-relaxed max-w-2xl mx-auto"
         >
-          Imagine moving to a new city, walking into a hospital, and the
-          doctor already knows your medical background—no lost paper files,
-          no paying for the same test twice, and zero starting from scratch.
+          Imagine moving to a new city, walking into a hospital, and the doctor
+          already knows your medical background—no lost paper files, no paying
+          for the same test twice, and zero starting from scratch.
         </motion.p>
 
         {/* 3. Action CTA Buttons */}
@@ -102,24 +101,31 @@ export const Hero: React.FC = () => {
         >
           <div className="flex items-center gap-2">
             <UserCheck className="w-4 h-4 text-blue-200" />
-            <span><strong className="text-white font-bold">100%</strong> You Own Your Data</span>
+            <span>
+              <strong className="text-white font-bold">100%</strong> You Own
+              Your Data
+            </span>
           </div>
           <div className="flex items-center gap-2">
             <Hospital className="w-4 h-4 text-blue-200" />
-            <span><strong className="text-white font-bold">Zero</strong> Extra Work for Hospitals</span>
+            <span>
+              <strong className="text-white font-bold">Zero</strong> Extra Work
+              for Hospitals
+            </span>
           </div>
           <div className="flex items-center gap-2">
             <LockKey className="w-4 h-4 text-blue-200" />
-            <span><strong className="text-white font-bold">Bank-Grade</strong> Private & Secure</span>
+            <span>
+              <strong className="text-white font-bold">Bank-Grade</strong>{" "}
+              Private & Secure
+            </span>
           </div>
         </motion.div>
 
         {/* 5. The 3-Phone Flagship Mockup Showcase */}
         <div className="w-full mt-14 sm:mt-16 pt-4 relative flex justify-center items-end">
-          
           {/* The 3 Phones Container */}
           <div className="relative w-full max-w-5xl flex items-end justify-center gap-3 sm:gap-6 lg:gap-8 px-2">
-            
             {/* ================= LEFT PHONE: Clinical Records Timeline ================= */}
             <motion.div
               initial={{ opacity: 0, y: 40, rotate: -3 }}
@@ -139,7 +145,9 @@ export const Hero: React.FC = () => {
                   <div>
                     {/* App Header */}
                     <div className="flex items-center justify-between pb-2 border-b border-slate-800">
-                      <span className="font-semibold text-[11px] text-slate-300">Your Insights</span>
+                      <span className="font-semibold text-[11px] text-slate-300">
+                        Your Insights
+                      </span>
                       <span className="text-[9px] text-blue-300 bg-blue-500/15 px-2 py-0.5 rounded-full">
                         Live Sync
                       </span>
@@ -149,11 +157,16 @@ export const Hero: React.FC = () => {
                     <div className="mt-3 space-y-2.5">
                       <div className="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700/60 space-y-1">
                         <div className="flex items-center justify-between text-[10px]">
-                          <span className="font-bold text-blue-300">Asthma Spirometry</span>
-                          <span className="text-slate-400 text-[8px]">10 Aug 2026</span>
+                          <span className="font-bold text-blue-300">
+                            Asthma Spirometry
+                          </span>
+                          <span className="text-slate-400 text-[8px]">
+                            10 Aug 2026
+                          </span>
                         </div>
                         <p className="text-[9px] text-slate-300 leading-snug">
-                          Lungs clear bilaterally. Peak flow 420 L/min. Compliant.
+                          Lungs clear bilaterally. Peak flow 420 L/min.
+                          Compliant.
                         </p>
                         <span className="inline-block text-[8px] text-slate-400 font-mono">
                           Facility: LUTH Lagos
@@ -162,8 +175,12 @@ export const Hero: React.FC = () => {
 
                       <div className="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700/60 space-y-1">
                         <div className="flex items-center justify-between text-[10px]">
-                          <span className="font-bold text-blue-300">Chest Radiograph</span>
-                          <span className="text-slate-400 text-[8px]">18 May 2026</span>
+                          <span className="font-bold text-blue-300">
+                            Chest Radiograph
+                          </span>
+                          <span className="text-slate-400 text-[8px]">
+                            18 May 2026
+                          </span>
                         </div>
                         <p className="text-[9px] text-slate-300 leading-snug">
                           PA view clear. No pulmonary infiltrates.
@@ -174,10 +191,17 @@ export const Hero: React.FC = () => {
                       </div>
 
                       <div className="bg-blue-950/60 p-2.5 rounded-xl border border-blue-800/50">
-                        <span className="text-[9px] uppercase font-bold text-blue-300 block">Vitals Summary</span>
+                        <span className="text-[9px] uppercase font-bold text-blue-300 block">
+                          Vitals Summary
+                        </span>
                         <div className="grid grid-cols-2 gap-1 mt-1 text-[9px] text-slate-300">
-                          <div>BP: <strong className="text-white">120/80</strong></div>
-                          <div>Pulse: <strong className="text-white">72 bpm</strong></div>
+                          <div>
+                            BP: <strong className="text-white">120/80</strong>
+                          </div>
+                          <div>
+                            Pulse:{" "}
+                            <strong className="text-white">72 bpm</strong>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -186,7 +210,8 @@ export const Hero: React.FC = () => {
                   {/* Bottom Status Bar */}
                   <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[9px] text-slate-400">
                     <span className="flex items-center gap-1">
-                      <ShieldCheck className="w-3 h-3 text-blue-300" /> Fully Encrypted
+                      <ShieldCheck className="w-3 h-3 text-blue-300" /> Fully
+                      Encrypted
                     </span>
                     <span>RH-NG</span>
                   </div>
@@ -203,10 +228,11 @@ export const Hero: React.FC = () => {
             >
               {/* Phone Hardware Shell */}
               <div className="w-full h-[520px] sm:h-[560px] lg:h-[590px] rounded-[42px] border-[7px] border-slate-900 bg-slate-950 shadow-2xl hero-phone-shadow-elevated overflow-hidden flex flex-col text-left select-none relative">
-                
                 {/* Dynamic Island Notch */}
                 <div className="h-7 bg-slate-950 flex items-center justify-between px-6 pt-1">
-                  <span className="text-[10px] font-medium text-slate-300">9:41</span>
+                  <span className="text-[10px] font-medium text-slate-300">
+                    9:41
+                  </span>
                   <div className="w-20 h-4 bg-black rounded-full flex items-center justify-end px-1.5">
                     <span className="w-2 h-2 rounded-full bg-blue-400" />
                   </div>
@@ -230,7 +256,9 @@ export const Hero: React.FC = () => {
                           className="w-10 h-10 rounded-full object-cover border-2 border-blue-400/80 shadow-md shrink-0"
                         />
                         <div>
-                          <span className="text-[10px] text-slate-400 block">Universal Health Passport</span>
+                          <span className="text-[10px] text-slate-400 block">
+                            Universal Health Passport
+                          </span>
                           <h4 className="text-sm font-bold font-heading text-white leading-tight">
                             Amina Ibrahim Bello
                           </h4>
@@ -244,7 +272,7 @@ export const Hero: React.FC = () => {
                     {/* The Signature Rahama Health ID Card */}
                     <div className="relative rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 border border-blue-400/30 shadow-lg text-white mb-4 overflow-hidden">
                       <div className="absolute top-0 right-0 -mr-6 -mt-6 w-24 h-24 bg-blue-400/20 rounded-full blur-xl pointer-events-none" />
-                      
+
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-1.5 text-[9px] tracking-wider uppercase font-bold text-blue-200">
                           <Image
@@ -272,16 +300,24 @@ export const Hero: React.FC = () => {
 
                       <div className="grid grid-cols-3 gap-2 pt-2 mt-2 border-t border-blue-500/30 text-[9px]">
                         <div>
-                          <span className="text-blue-300 block text-[8px]">Blood</span>
+                          <span className="text-blue-300 block text-[8px]">
+                            Blood
+                          </span>
                           <span className="font-bold">O+</span>
                         </div>
                         <div>
-                          <span className="text-blue-300 block text-[8px]">Genotype</span>
+                          <span className="text-blue-300 block text-[8px]">
+                            Genotype
+                          </span>
                           <span className="font-bold">AA</span>
                         </div>
                         <div>
-                          <span className="text-blue-300 block text-[8px]">Facility</span>
-                          <span className="font-bold truncate block">LUTH Lagos</span>
+                          <span className="text-blue-300 block text-[8px]">
+                            Facility
+                          </span>
+                          <span className="font-bold truncate block">
+                            LUTH Lagos
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -291,7 +327,9 @@ export const Hero: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-1.5">
                           <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-                          <span className="text-[10px] font-semibold text-slate-200">Doctor Access Control</span>
+                          <span className="text-[10px] font-semibold text-slate-200">
+                            Doctor Access Control
+                          </span>
                         </div>
                         <span className="text-[8px] text-blue-300 bg-blue-500/10 px-1.5 py-0.5 rounded">
                           You&apos;re in Charge
@@ -306,7 +344,9 @@ export const Hero: React.FC = () => {
                           />
                           <span>Dr. Okonjo (LUTH)</span>
                         </div>
-                        <span className="text-[9px] text-blue-200 font-semibold">Approved</span>
+                        <span className="text-[9px] text-blue-200 font-semibold">
+                          Approved
+                        </span>
                       </div>
                     </div>
 
@@ -367,7 +407,9 @@ export const Hero: React.FC = () => {
                   <div>
                     {/* App Header */}
                     <div className="flex items-center justify-between pb-2 border-b border-slate-800">
-                      <span className="font-semibold text-[11px] text-slate-300">Access Request</span>
+                      <span className="font-semibold text-[11px] text-slate-300">
+                        Access Request
+                      </span>
                       <span className="text-[9px] text-blue-300 font-semibold">
                         Pending OTP
                       </span>
@@ -382,18 +424,24 @@ export const Hero: React.FC = () => {
                           className="w-8 h-8 rounded-full object-cover border border-white/25 shadow-sm shrink-0"
                         />
                         <div>
-                          <span className="text-[9px] text-slate-400 block">Emergency Visit</span>
-                          <span className="text-[11px] font-bold text-white">Dr. M. Sani (FMC Abuja)</span>
+                          <span className="text-[9px] text-slate-400 block">
+                            Emergency Visit
+                          </span>
+                          <span className="text-[11px] font-bold text-white">
+                            Dr. M. Sani (FMC Abuja)
+                          </span>
                         </div>
                       </div>
 
                       <p className="text-[9px] text-slate-300 leading-snug">
-                        Dr. M. Sani requests 24h temporary access to your allergy list and past records.
+                        Dr. M. Sani requests 24h temporary access to your
+                        allergy list and past records.
                       </p>
 
                       <div className="pt-2 space-y-1.5">
                         <div className="w-full py-2 rounded-lg bg-[#0837ad] hover:bg-[#062c8d] text-white font-semibold text-[10px] text-center shadow-md flex items-center justify-center gap-1 cursor-pointer transition-colors">
-                          <CheckCircle className="w-3.5 h-3.5 text-blue-200" /> Approve 24-Hr Access
+                          <CheckCircle className="w-3.5 h-3.5 text-blue-200" />{" "}
+                          Approve 24-Hr Access
                         </div>
                         <div className="w-full py-1.5 rounded-lg bg-slate-800 text-slate-400 text-[9px] text-center">
                           Deny Access
@@ -409,7 +457,9 @@ export const Hero: React.FC = () => {
                       <div className="bg-slate-950/70 p-2 rounded-lg border border-slate-800 text-[9px] text-slate-300 space-y-1 font-mono">
                         <div className="flex items-center justify-between text-blue-300">
                           <span>✔ Access Verified</span>
-                          <span className="text-[8px] text-slate-500">10:14 AM</span>
+                          <span className="text-[8px] text-slate-500">
+                            10:14 AM
+                          </span>
                         </div>
                         <p className="text-slate-400 text-[8px]">
                           LUTH Doctor Dr. Okonjo closed file.
@@ -421,20 +471,19 @@ export const Hero: React.FC = () => {
                   {/* Bottom Status Bar */}
                   <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[9px] text-slate-400">
                     <span className="flex items-center gap-1">
-                      <Eye className="w-3 h-3 text-blue-400" /> Full Access History
+                      <Eye className="w-3 h-3 text-blue-400" /> Full Access
+                      History
                     </span>
-                    <span className="text-blue-300 font-semibold">100% Private</span>
+                    <span className="text-blue-300 font-semibold">
+                      100% Private
+                    </span>
                   </div>
                 </div>
               </div>
             </motion.div>
-
           </div>
         </div>
-
       </div>
     </section>
   );
 };
-
-

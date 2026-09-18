@@ -34,9 +34,9 @@ export const Footer: React.FC = () => {
           {/* Col 1 & 2: Brand & Mission */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center p-1.5 shadow-md transition-transform group-hover:scale-105 overflow-hidden">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center p-1.5 shadow-md transition-transform group-hover:scale-105 overflow-hidden">
                 <Image
-                  src="/rahama-logo-blue.png"
+                  src="/rahama-logo-white.png"
                   alt="Rahama Digital Health Logo"
                   width={36}
                   height={36}
@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col text-left justify-center">
-                <span className="text-lg font-black font-heading tracking-tight text-white leading-tight">
+                <span className="text-lg font-black font-heading tracking-tight   z`1text-white leading-tight">
                   RAHAMA
                 </span>
                 <span className="text-[10px] font-bold tracking-widest text-blue-200 uppercase leading-none">
