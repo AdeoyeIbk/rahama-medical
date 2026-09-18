@@ -63,7 +63,7 @@ export default function HospitalLoginPage() {
           <p className="text-xs text-blue-200">Facility Administration & Interoperability Portal</p>
         </div>
 
-        <Card className="bg-slate-900/90 border-slate-800 p-8 shadow-2xl backdrop-blur-xl text-slate-100 space-y-6">
+        <Card className="bg-slate-900/90 border-slate-800 p-6 sm:p-8 shadow-2xl backdrop-blur-xl text-slate-100 space-y-6">
           <div className="flex items-center gap-3 pb-4 border-b border-slate-800">
             <div className="p-2.5 rounded-xl bg-blue-950 text-blue-400">
               <Hospital className="w-6 h-6" />

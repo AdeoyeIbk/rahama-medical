@@ -75,7 +75,7 @@ export default function HospitalRegisterPage() {
           </p>
         </div>
 
-        <Card className="bg-slate-900 border-slate-800 p-8 text-slate-100 shadow-2xl space-y-6">
+        <Card className="bg-slate-900 border-slate-800 p-6 sm:p-8 text-slate-100 shadow-2xl space-y-6">
           {isSuccess ? (
             <div className="text-center py-8 space-y-4">
               <div className="w-16 h-16 rounded-full bg-amber-500/20 border border-amber-500 text-amber-400 flex items-center justify-center mx-auto">

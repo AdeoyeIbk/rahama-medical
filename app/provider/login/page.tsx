@@ -52,7 +52,7 @@ export default function ProviderLoginPage() {
           <p className="text-xs text-blue-200">Clinical Record Lookup & AI Documentation Portal</p>
         </div>
 
-        <Card className="bg-slate-900 border-slate-800 p-8 text-slate-100 shadow-2xl space-y-6">
+        <Card className="bg-slate-900 border-slate-800 p-6 sm:p-8 text-slate-100 shadow-2xl space-y-6">
           <div className="flex items-center gap-3 pb-4 border-b border-slate-800">
             <div className="p-2.5 rounded-xl bg-emerald-950 text-emerald-400">
               <Heartbeat className="w-6 h-6" />
