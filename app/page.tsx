@@ -65,7 +65,7 @@ export default function HomePage() {
               {/* Right Column: Stakeholder Trio Cards with Consistent Padding & Clear Hierarchy */}
               <div className="lg:col-span-6 space-y-5">
                 {/* 1. Hospitals Card */}
-                <div className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 card-soft-shadow hover:shadow-xl transition-all duration-300">
+                <div className="bg-white p-6 sm:p-7 lg:p-8 rounded-3xl border border-slate-200/80 card-soft-shadow hover:shadow-xl transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#0837ad] border border-blue-100 flex items-center justify-center shrink-0">
                       <Hospital className="w-6 h-6" />
@@ -83,7 +83,7 @@ export default function HomePage() {
                 </div>
 
                 {/* 2. Patients Card */}
-                <div className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 card-soft-shadow hover:shadow-xl transition-all duration-300">
+                <div className="bg-white p-6 sm:p-7 lg:p-8 rounded-3xl border border-slate-200/80 card-soft-shadow hover:shadow-xl transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#0837ad] border border-blue-100 flex items-center justify-center shrink-0">
                       <UserCheck className="w-6 h-6" />
@@ -101,7 +101,7 @@ export default function HomePage() {
                 </div>
 
                 {/* 3. Doctors Card */}
-                <div className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 card-soft-shadow hover:shadow-xl transition-all duration-300">
+                <div className="bg-white p-6 sm:p-7 lg:p-8 rounded-3xl border border-slate-200/80 card-soft-shadow hover:shadow-xl transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#0837ad] border border-blue-100 flex items-center justify-center shrink-0">
                       <Heartbeat className="w-6 h-6" />
@@ -134,7 +134,7 @@ export default function HomePage() {
 
         {/* 7. Strong Final CTA Banner (Reference-Matched Rounded Card on alternating bg-[#f3f7fd]) */}
         <section className="py-24 sm:py-32 px-6 sm:px-16 lg:px-32 bg-[#f3f7fd]">
-          <div className="max-w-6xl mx-auto rounded-[36px] sm:rounded-[44px] bg-gradient-to-br from-[#0837ad] via-[#0b3dc4] to-[#041d63] text-white p-10 sm:p-16 text-center space-y-8 shadow-2xl shadow-blue-900/15 border border-blue-400/20 relative overflow-hidden">
+          <div className="max-w-6xl mx-auto rounded-[36px] sm:rounded-[44px] bg-gradient-to-br from-[#0837ad] via-[#0b3dc4] to-[#041d63] text-white p-8 sm:p-12 lg:p-16 text-center space-y-8 shadow-2xl shadow-blue-900/15 border border-blue-400/20 relative overflow-hidden">
             
             {/* Ambient Lighting */}
             <div className="absolute top-0 right-1/4 w-80 h-80 bg-blue-400/20 blur-[80px] rounded-full pointer-events-none" />

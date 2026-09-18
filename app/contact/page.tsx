@@ -217,7 +217,7 @@ export default function ContactPage() {
         {/* 4. Quick Hospital Fast-Track Callout (Alternating bg-[#f3f7fd]) */}
         <section className="py-20 bg-[#f3f7fd]">
           <div className="max-w-4xl mx-auto px-6 sm:px-16 lg:px-32">
-            <div className="p-8 sm:p-12 rounded-3xl bg-white border border-slate-200/80 card-soft-shadow flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-white border border-slate-200/80 card-soft-shadow flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
               <div className="space-y-2">
                 <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900">
                   Ready to register your healthcare facility today?

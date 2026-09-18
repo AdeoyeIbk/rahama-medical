@@ -4,7 +4,7 @@ import { Footer } from '@/components/navigation/Footer';
 import { MissionVisionValuesSection } from '@/components/marketing/MissionVisionValuesSection';
 
 export const metadata = {
-  title: 'About Rahama Digital Health — Simple, Connected Care',
+  title: 'About Rahama Digital Health | Simple, Connected Care',
   description: 'Learn how Rahama connects hospitals and patients so medical records travel safely across Africa.',
 };
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
               Connecting Hospitals. <span className="text-blue-200">Protecting Patients.</span>
             </h1>
             <p className="text-base sm:text-xl text-blue-100/90 max-w-3xl mx-auto leading-relaxed">
-              Rahama makes sure your medical history travels with you safely whenever you visit a new doctor or hospital—giving you total control of your records on your phone.
+              Rahama makes sure your medical history travels with you safely whenever you visit a new doctor or hospital, giving you total control of your records on your phone.
             </p>
           </div>
         </section>
