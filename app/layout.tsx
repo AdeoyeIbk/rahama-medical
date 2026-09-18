@@ -12,13 +12,13 @@ const bricolage = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Rahama Digital Health — Connected Healthcare Infrastructure for Africa',
+    default: 'Rahama Digital Health | Connected Healthcare Infrastructure for Africa',
     template: '%s | Rahama Digital Health'
   },
   description: 'Enabling patients to securely own and access lifelong medical records while allowing healthcare facilities to exchange authorized patient info seamlessly across Africa.',
   keywords: ['Digital Health', 'Healthcare Infrastructure', 'Medical Records', 'Africa Health Tech', 'EMR Interoperability', 'Patient Identity'],
   openGraph: {
-    title: 'Rahama Digital Health — Connected Healthcare Infrastructure',
+    title: 'Rahama Digital Health | Connected Healthcare Infrastructure',
     description: 'Continuity of care shouldn\'t stop at a border. Rahama connects patients, doctors, and hospitals.',
     siteName: 'Rahama Digital Health',
     type: 'website',

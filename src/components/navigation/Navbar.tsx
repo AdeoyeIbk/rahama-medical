@@ -65,7 +65,7 @@ export const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Links */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-3.5">
+          <div className="hidden lg:flex items-center gap-3.5">
             {/* Login Dropdown */}
             <div className="relative">
               <button
@@ -151,7 +151,7 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="md:hidden flex items-center gap-3">
+          <div className="lg:hidden flex items-center gap-3">
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="p-2.5 rounded-xl bg-blue-50 text-[#0837ad] border border-blue-200/80 hover:bg-blue-100 flex items-center justify-center transition-colors shadow-xs"
@@ -174,7 +174,7 @@ export const Navbar: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
                 transition={{ duration: 0.2 }}
-                className="md:hidden fixed inset-0 z-[99999] bg-white flex flex-col justify-between p-6 sm:p-10 overflow-y-auto"
+                className="lg:hidden fixed inset-0 z-[99999] bg-white flex flex-col justify-between p-6 sm:p-10 overflow-y-auto"
               >
                 {/* Top Bar inside Overlay */}
                 <div className="flex items-center justify-between shrink-0 pb-5 border-b border-slate-100">
