@@ -1,4 +1,4 @@
-# Rahama Digital Health — Frontend API Contract Specification
+# Rahama Digital Health | Frontend API Contract Specification
 
 This document defines the interface boundary between the Rahama Digital Health frontend and backend services. The frontend service layer is structured to consume these RESTful endpoints.
 
