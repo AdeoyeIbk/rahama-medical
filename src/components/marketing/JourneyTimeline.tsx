@@ -22,7 +22,7 @@ export const JourneyTimeline: React.FC = () => {
       num: '01',
       title: 'Get Your Free Health ID',
       description: 'When you visit a connected hospital, you get a unique Rahama Health ID linked safely to your phone number.',
-      className: 'md:col-span-2',
+      className: 'col-span-1 md:col-span-1 lg:col-span-2',
       icon: (
         <div className="flex items-center justify-between w-full">
           <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#0837ad] border border-blue-100 flex items-center justify-center">
@@ -34,7 +34,7 @@ export const JourneyTimeline: React.FC = () => {
         </div>
       ),
       header: (
-        <div className="flex flex-1 w-full h-full min-h-[8.5rem] rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 flex-col justify-between border border-blue-400/20 relative overflow-hidden shadow-md text-white">
+        <div className="flex flex-1 w-full min-h-[7.5rem] sm:min-h-[8.5rem] rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 flex-col justify-between border border-blue-400/20 relative overflow-hidden shadow-md text-white">
           <div className="flex items-center justify-between z-10">
             <span className="text-xs font-mono text-blue-200 flex items-center gap-1.5 font-semibold">
               <ShieldCheck className="w-4 h-4 text-blue-300" />
@@ -59,7 +59,7 @@ export const JourneyTimeline: React.FC = () => {
       num: '02',
       title: 'Doctor Treats You Normally',
       description: 'The hospital writes down your consultation, lab tests, and prescriptions on their computer just like they always do.',
-      className: 'md:col-span-1',
+      className: 'col-span-1 md:col-span-1 lg:col-span-1',
       icon: (
         <div className="flex items-center justify-between w-full">
           <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#0837ad] border border-blue-100 flex items-center justify-center">
@@ -71,7 +71,7 @@ export const JourneyTimeline: React.FC = () => {
         </div>
       ),
       header: (
-        <div className="flex flex-1 w-full h-full min-h-[8.5rem] rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 flex-col justify-between border border-blue-400/20 relative overflow-hidden shadow-md text-white">
+        <div className="flex flex-1 w-full min-h-[7.5rem] sm:min-h-[8.5rem] rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 flex-col justify-between border border-blue-400/20 relative overflow-hidden shadow-md text-white">
           <div className="flex items-center justify-between z-10">
             <span className="text-xs font-mono text-blue-200 flex items-center gap-1.5 font-semibold">
               HOSPITAL SOFTWARE
@@ -96,7 +96,7 @@ export const JourneyTimeline: React.FC = () => {
       num: '03',
       title: 'Your File Gets Saved Safely',
       description: 'A copy of your medical summary is locked with bank-grade security under your Rahama Health ID so strangers can\'t view it.',
-      className: 'md:col-span-1',
+      className: 'col-span-1 md:col-span-1 lg:col-span-1',
       icon: (
         <div className="flex items-center justify-between w-full">
           <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#0837ad] border border-blue-100 flex items-center justify-center">
@@ -108,7 +108,7 @@ export const JourneyTimeline: React.FC = () => {
         </div>
       ),
       header: (
-        <div className="flex flex-1 w-full h-full min-h-[8.5rem] rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 flex-col justify-between border border-blue-400/20 relative overflow-hidden shadow-md text-white">
+        <div className="flex flex-1 w-full min-h-[7.5rem] sm:min-h-[8.5rem] rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 flex-col justify-between border border-blue-400/20 relative overflow-hidden shadow-md text-white">
           <div className="flex items-center justify-between z-10 text-blue-200">
             <div className="flex items-center space-x-1.5">
               <LockKey className="w-4 h-4 text-blue-300" />
@@ -134,7 +134,7 @@ export const JourneyTimeline: React.FC = () => {
       num: '04',
       title: 'You Say Who Gets Access',
       description: 'When you visit a new doctor, you get a quick text message or phone code to unlock your medical records for that visit.',
-      className: 'md:col-span-2',
+      className: 'col-span-1 md:col-span-1 lg:col-span-2',
       icon: (
         <div className="flex items-center justify-between w-full">
           <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#0837ad] border border-blue-100 flex items-center justify-center">
@@ -146,7 +146,7 @@ export const JourneyTimeline: React.FC = () => {
         </div>
       ),
       header: (
-        <div className="flex flex-1 w-full h-full min-h-[8.5rem] rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 flex-col justify-between border border-blue-400/20 relative overflow-hidden shadow-md text-white">
+        <div className="flex flex-1 w-full min-h-[7.5rem] sm:min-h-[8.5rem] rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 flex-col justify-between border border-blue-400/20 relative overflow-hidden shadow-md text-white">
           <div className="flex items-center justify-between z-10">
             <span className="text-xs font-mono text-blue-200 flex items-center gap-1.5 font-semibold">
               <ShieldCheck className="w-4 h-4 text-blue-300" />
@@ -156,7 +156,7 @@ export const JourneyTimeline: React.FC = () => {
               TEMPORARY ACCESS
             </span>
           </div>
-          <div className="z-10 grid grid-cols-2 gap-2 text-[11px]">
+          <div className="z-10 grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
             <div className="bg-white/10 backdrop-blur-md p-2.5 rounded-xl border border-white/15">
               <p className="text-blue-200 text-[9px]">Requesting Clinic</p>
               <p className="font-semibold text-white truncate">LUTH Emergency Care</p>
@@ -175,8 +175,8 @@ export const JourneyTimeline: React.FC = () => {
     {
       num: '05',
       title: 'Faster, Better Treatment',
-      description: 'Your new doctor instantly sees your allergies, past blood tests, and treatments—saving you time, money, and stress.',
-      className: 'md:col-span-2',
+      description: 'Your new doctor instantly sees your allergies, past blood tests, and treatments, saving you time, money, and stress.',
+      className: 'col-span-1 md:col-span-1 lg:col-span-2',
       icon: (
         <div className="flex items-center justify-between w-full">
           <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#0837ad] border border-blue-100 flex items-center justify-center">
@@ -188,7 +188,7 @@ export const JourneyTimeline: React.FC = () => {
         </div>
       ),
       header: (
-        <div className="flex flex-1 w-full h-full min-h-[8.5rem] rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 flex-col justify-between border border-blue-400/20 relative overflow-hidden shadow-md text-white">
+        <div className="flex flex-1 w-full min-h-[7.5rem] sm:min-h-[8.5rem] rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 flex-col justify-between border border-blue-400/20 relative overflow-hidden shadow-md text-white">
           <div className="flex items-center justify-between z-10">
             <span className="text-xs font-mono text-blue-200 flex items-center gap-1.5 font-semibold">
               VERIFIED MEDICAL HISTORY
@@ -215,7 +215,7 @@ export const JourneyTimeline: React.FC = () => {
       num: '06',
       title: 'See Who Viewed Your File',
       description: 'Check your phone anytime to see a clear list of every doctor who opened your medical file and which hospital they were from.',
-      className: 'md:col-span-1',
+      className: 'col-span-1 md:col-span-1 lg:col-span-1',
       icon: (
         <div className="flex items-center justify-between w-full">
           <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#0837ad] border border-blue-100 flex items-center justify-center">
@@ -227,7 +227,7 @@ export const JourneyTimeline: React.FC = () => {
         </div>
       ),
       header: (
-        <div className="flex flex-1 w-full h-full min-h-[8.5rem] rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 flex-col justify-between border border-blue-400/20 relative overflow-hidden shadow-md text-white">
+        <div className="flex flex-1 w-full min-h-[7.5rem] sm:min-h-[8.5rem] rounded-2xl bg-gradient-to-br from-[#0837ad] to-[#052370] p-4 flex-col justify-between border border-blue-400/20 relative overflow-hidden shadow-md text-white">
           <div className="flex items-center justify-between text-[11px] text-blue-200 z-10">
             <span className="font-mono font-semibold">ACCESS AUDIT LOG</span>
             <Eye className="w-4 h-4 text-blue-300" />
@@ -255,7 +255,7 @@ export const JourneyTimeline: React.FC = () => {
             How Rahama Works in <span className="text-[#0837ad]">6 Simple Steps</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            Here is exactly what happens when you and your doctor use Rahama—no complicated tech setup required.
+            Here is exactly what happens when you and your doctor use Rahama, with no complicated tech setup required.
           </p>
         </div>
 

@@ -65,7 +65,7 @@ export const MissionVisionValuesSection: React.FC = () => {
       <section className="py-24 sm:py-32 bg-white text-slate-900 transition-colors">
         <div className="max-w-[1600px] mx-auto px-6 sm:px-16 lg:px-32">
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
             {pillars.map((item, idx) => (
               <motion.div
                 key={item.label}
@@ -73,7 +73,7 @@ export const MissionVisionValuesSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="bg-[#f8fafc] hover:bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 hover:border-blue-200 card-soft-shadow hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                className="bg-[#f8fafc] hover:bg-white p-6 sm:p-7 lg:p-8 rounded-3xl border border-slate-200/80 hover:border-blue-200 card-soft-shadow hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-6">
@@ -94,7 +94,7 @@ export const MissionVisionValuesSection: React.FC = () => {
           </div>
 
           {/* Foundation Quote Banner (Card matching Homepage CTA) */}
-          <div className="mt-20 max-w-5xl mx-auto rounded-[36px] sm:rounded-[44px] bg-gradient-to-br from-[#0837ad] via-[#0b3dc4] to-[#041d63] text-white p-10 sm:p-16 text-center space-y-6 shadow-2xl shadow-blue-900/15 border border-blue-400/20 relative overflow-hidden">
+          <div className="mt-20 max-w-5xl mx-auto rounded-[36px] sm:rounded-[44px] bg-gradient-to-br from-[#0837ad] via-[#0b3dc4] to-[#041d63] text-white p-8 sm:p-12 lg:p-16 text-center space-y-6 shadow-2xl shadow-blue-900/15 border border-blue-400/20 relative overflow-hidden">
             <div className="absolute top-0 right-1/4 w-80 h-80 bg-blue-400/20 blur-[80px] rounded-full pointer-events-none" />
             
             <div className="relative z-10 space-y-4 max-w-2xl mx-auto">
@@ -126,7 +126,7 @@ export const MissionVisionValuesSection: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {values.map((v, idx) => (
               <motion.div
                 key={v.title}
@@ -134,7 +134,7 @@ export const MissionVisionValuesSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 hover:border-blue-200 card-soft-shadow hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                className="bg-white p-6 sm:p-7 lg:p-8 rounded-3xl border border-slate-200/80 hover:border-blue-200 card-soft-shadow hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-[#0837ad]">

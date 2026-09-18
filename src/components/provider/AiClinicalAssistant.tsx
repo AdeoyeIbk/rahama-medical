@@ -98,7 +98,7 @@ export const AiClinicalAssistant: React.FC<AiClinicalAssistantProps> = ({
           <div className="space-y-3">
             <div>
               <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                S — Subjective (History & Symptoms)
+                S: Subjective (History & Symptoms)
               </label>
               <textarea
                 rows={2}
@@ -110,7 +110,7 @@ export const AiClinicalAssistant: React.FC<AiClinicalAssistantProps> = ({
 
             <div>
               <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                O — Objective (Vitals & Physical Exam)
+                O: Objective (Vitals & Physical Exam)
               </label>
               <textarea
                 rows={2}
@@ -122,7 +122,7 @@ export const AiClinicalAssistant: React.FC<AiClinicalAssistantProps> = ({
 
             <div>
               <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                A — Assessment (Diagnosis)
+                A: Assessment (Diagnosis)
               </label>
               <textarea
                 rows={2}
@@ -134,7 +134,7 @@ export const AiClinicalAssistant: React.FC<AiClinicalAssistantProps> = ({
 
             <div>
               <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                P — Plan & Prescription
+                P: Plan & Prescription
               </label>
               <textarea
                 rows={2}

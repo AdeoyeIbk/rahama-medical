@@ -60,8 +60,8 @@ export const BeforeAfterVisual: React.FC = () => {
                 transition={{ duration: 0.35 }}
                 className="space-y-8"
               >
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                  <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 card-soft-shadow text-center space-y-3">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+                  <div className="bg-slate-50 p-6 sm:p-7 lg:p-8 rounded-3xl border border-slate-200/80 card-soft-shadow text-center space-y-3">
                     <div className="w-12 h-12 rounded-2xl bg-slate-200/80 border border-slate-300/80 flex items-center justify-center mx-auto text-slate-700">
                       <FileText className="w-6 h-6" />
                     </div>
@@ -74,7 +74,7 @@ export const BeforeAfterVisual: React.FC = () => {
                     </span>
                   </div>
 
-                  <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 card-soft-shadow text-center space-y-3">
+                  <div className="bg-slate-50 p-6 sm:p-7 lg:p-8 rounded-3xl border border-slate-200/80 card-soft-shadow text-center space-y-3">
                     <div className="w-12 h-12 rounded-2xl bg-slate-200/80 border border-slate-300/80 flex items-center justify-center mx-auto text-slate-700">
                       <Prohibit className="w-6 h-6" />
                     </div>
@@ -87,7 +87,7 @@ export const BeforeAfterVisual: React.FC = () => {
                     </span>
                   </div>
 
-                  <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 card-soft-shadow text-center space-y-3">
+                  <div className="bg-slate-50 p-6 sm:p-7 lg:p-8 rounded-3xl border border-slate-200/80 card-soft-shadow text-center space-y-3">
                     <div className="w-12 h-12 rounded-2xl bg-slate-200/80 border border-slate-300/80 flex items-center justify-center mx-auto text-slate-700">
                       <Warning className="w-6 h-6" />
                     </div>
@@ -138,8 +138,8 @@ export const BeforeAfterVisual: React.FC = () => {
                 </div>
 
                 {/* Connected Hospitals Trio */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 pt-2">
-                  <div className="bg-white p-6 rounded-3xl border border-blue-100 text-center card-soft-shadow hover:shadow-lg transition-shadow">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 pt-2">
+                  <div className="bg-white p-6 sm:p-7 lg:p-8 rounded-3xl border border-blue-100 text-center card-soft-shadow hover:shadow-lg transition-shadow">
                     <div className="flex items-center justify-center gap-2 mb-2 text-[#0837ad] font-bold text-sm">
                       <Hospital className="w-4 h-4 text-[#0837ad]" /> Hospital #1 (LUTH Lagos)
                     </div>
@@ -148,7 +148,7 @@ export const BeforeAfterVisual: React.FC = () => {
                     </span>
                   </div>
 
-                  <div className="bg-white p-6 rounded-3xl border border-blue-100 text-center card-soft-shadow hover:shadow-lg transition-shadow">
+                  <div className="bg-white p-6 sm:p-7 lg:p-8 rounded-3xl border border-blue-100 text-center card-soft-shadow hover:shadow-lg transition-shadow">
                     <div className="flex items-center justify-center gap-2 mb-2 text-[#0837ad] font-bold text-sm">
                       <Hospital className="w-4 h-4 text-[#0837ad]" /> Hospital #2 (FMC Abuja)
                     </div>
@@ -157,7 +157,7 @@ export const BeforeAfterVisual: React.FC = () => {
                     </span>
                   </div>
 
-                  <div className="bg-white p-6 rounded-3xl border border-blue-100 text-center card-soft-shadow hover:shadow-lg transition-shadow">
+                  <div className="bg-white p-6 sm:p-7 lg:p-8 rounded-3xl border border-blue-100 text-center card-soft-shadow hover:shadow-lg transition-shadow">
                     <div className="flex items-center justify-center gap-2 mb-2 text-[#0837ad] font-bold text-sm">
                       <Hospital className="w-4 h-4 text-[#0837ad]" /> Hospital #3 (AKTH Kano)
                     </div>

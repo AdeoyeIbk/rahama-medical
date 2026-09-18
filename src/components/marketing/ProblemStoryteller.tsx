@@ -43,7 +43,7 @@ export const ProblemStoryteller: React.FC = () => {
         {/* Section Header with Generous Breathing Room */}
         <div className="max-w-3xl mb-16 sm:mb-20 space-y-4">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 tracking-tight leading-tight">
-            Why changing hospitals is currently a headache—and{' '}
+            Why changing hospitals is currently a headache, and{' '}
             <span className="text-[#0837ad]">how we fix it.</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed pt-2">
@@ -52,7 +52,7 @@ export const ProblemStoryteller: React.FC = () => {
         </div>
 
         {/* 3 Story Cards with Breathing Room (Reference Match) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           {cards.map((card, idx) => (
             <motion.div
               key={card.id}
@@ -60,7 +60,7 @@ export const ProblemStoryteller: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.15 }}
-              className="bg-white border border-slate-200/80 rounded-3xl p-8 card-soft-shadow hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-blue-200"
+              className="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-7 lg:p-8 card-soft-shadow hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-blue-200"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
@@ -102,7 +102,7 @@ export const ProblemStoryteller: React.FC = () => {
               Rahama connects the dots so your medical story goes wherever you go.
             </h3>
             <p className="text-sm sm:text-base text-blue-100/90 leading-relaxed">
-              Hospitals don&apos;t need to change their computers or buy new software. Rahama works quietly in the background so your doctor gets the full picture—only when you give permission.
+              Hospitals don&apos;t need to change their computers or buy new software. Rahama works quietly in the background so your doctor gets the full picture, only when you give permission.
             </p>
           </div>
 

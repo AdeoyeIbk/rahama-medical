@@ -48,7 +48,7 @@ export const Hero: React.FC = () => {
           className="mt-6 text-base sm:text-lg lg:text-xl text-blue-50/90 font-normal leading-relaxed max-w-2xl mx-auto"
         >
           Imagine moving to a new city, walking into a hospital, and the doctor
-          already knows your medical background—no lost paper files, no paying
+          already knows your medical background with no lost paper files, no paying
           for the same test twice, and zero starting from scratch.
         </motion.p>
 

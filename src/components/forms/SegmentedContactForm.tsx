@@ -32,7 +32,7 @@ export const SegmentedContactForm: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white p-8 sm:p-12 rounded-3xl border border-slate-200/80 card-soft-shadow shadow-xl max-w-3xl mx-auto">
+    <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-3xl border border-slate-200/80 card-soft-shadow shadow-xl max-w-3xl mx-auto">
       {isSubmitted ? (
         <div className="text-center py-12 space-y-5">
           <div className="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-200 text-[#0837ad] flex items-center justify-center mx-auto">

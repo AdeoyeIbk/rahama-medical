@@ -62,13 +62,13 @@ export const HospitalDiscoverySection: React.FC<HospitalDiscoverySectionProps> =
           </select>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {hospitals.map((hosp) => {
             const isHome = homeHospitalId === hosp.id;
             return (
               <div
                 key={hosp.id}
-                className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 hover:border-blue-200 card-soft-shadow hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                className="bg-white p-6 sm:p-7 lg:p-8 rounded-3xl border border-slate-200/80 hover:border-blue-200 card-soft-shadow hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-start justify-between mb-4">

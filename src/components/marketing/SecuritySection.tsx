@@ -41,7 +41,7 @@ export const SecuritySection: React.FC = () => {
             Your privacy is <span className="text-[#0837ad]">100% in your hands.</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            We built Rahama with one strict rule: your medical records belong to you—not us, and not the hospital.
+            We built Rahama with one strict rule: your medical records belong to you, not us, and not the hospital.
           </p>
         </div>
 
