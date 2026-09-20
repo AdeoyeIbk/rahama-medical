@@ -5,15 +5,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
-import { Card } from '@/components/ui/Card';
 import { authService } from '@/services/auth.service';
-import { Hospital, ArrowRight, LockKey } from '@phosphor-icons/react';
+import { Eye, EyeSlash } from '@phosphor-icons/react';
 
 export default function HospitalLoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState('contact@luth.gov.ng');
   const [password, setPassword] = useState('password123');
+  const [showPassword, setShowPassword] = useState(false);
+  const [rememberMe, setRememberMe] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -33,90 +33,136 @@ export default function HospitalLoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-[#000066] text-white p-4 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/40 via-[#000066] to-[#00004d] pointer-events-none" />
-
-      <div className="w-full max-w-md relative z-10 space-y-6">
-        {/* Brand header */}
-        <div className="text-center space-y-2">
-          <Link href="/" className="inline-flex items-center gap-3">
-            <div className="w-11 h-11 rounded-2xl bg-[#0837ad] flex items-center justify-center p-1.5 shadow-lg border border-blue-400/20 overflow-hidden">
+    <div className="min-h-screen bg-[#e8edfc] flex items-center justify-center p-4 sm:p-6 lg:p-8 relative selection:bg-[#0837ad] selection:text-white">
+      {/* Centered White Card (Exact Match to Invooce Reference) */}
+      <div className="w-full max-w-xl bg-white rounded-[28px] sm:rounded-[32px] shadow-xl shadow-blue-900/5 border border-slate-100 p-8 sm:p-12 lg:p-14 relative">
+        
+        {/* Top Header: Logo on Left, Portal Badge on Right */}
+        <div className="flex items-center justify-between mb-8 sm:mb-10">
+          <Link href="/" className="inline-flex items-center gap-2.5 group">
+            <div className="w-8 h-8 rounded-lg bg-[#0837ad] flex items-center justify-center p-1.5 shadow-sm transition-transform group-hover:scale-105 overflow-hidden">
               <Image
                 src="/rahama-logo-white.png"
-                alt="Rahama Digital Health Logo"
-                width={40}
-                height={40}
+                alt="Rahama Logo"
+                width={28}
+                height={28}
                 className="w-full h-full object-contain"
                 priority
               />
             </div>
-            <div className="flex flex-col text-left justify-center">
-              <span className="text-xl font-bold font-heading tracking-tight text-white leading-tight">
-                RAHAMA <span className="text-blue-300">HOSPITAL</span>
-              </span>
-              <span className="text-[10px] font-bold tracking-widest text-blue-400 uppercase leading-none">
-                DIGITAL HEALTH
-              </span>
-            </div>
+            <span className="text-base font-black font-heading tracking-tight text-slate-900">
+              Rahama
+            </span>
           </Link>
-          <p className="text-xs text-blue-200">Facility Administration & Interoperability Portal</p>
+          <span className="text-[11px] font-semibold text-[#0837ad] bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            Hospital Portal
+          </span>
         </div>
 
-        <Card className="bg-slate-900/90 border-slate-800 p-6 sm:p-8 shadow-2xl backdrop-blur-xl text-slate-100 space-y-6">
-          <div className="flex items-center gap-3 pb-4 border-b border-slate-800">
-            <div className="p-2.5 rounded-xl bg-blue-950 text-blue-400">
-              <Hospital className="w-6 h-6" />
-            </div>
-            <div>
-              <h2 className="text-lg font-bold font-heading text-white">Hospital Sign In</h2>
-              <p className="text-xs text-slate-400">Access registered hospital services</p>
-            </div>
+        {/* Center Title & Greeting */}
+        <div className="text-center space-y-1 mb-8">
+          <h1 className="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 tracking-tight">
+            Login
+          </h1>
+          <p className="text-sm text-slate-500 font-medium">
+            Hi, Welcome back 👋
+          </p>
+        </div>
+
+        {error && (
+          <div className="p-3 mb-4 rounded-xl bg-red-50 border border-red-200 text-xs text-red-600 font-medium text-center">
+            {error}
           </div>
+        )}
 
-          {error && (
-            <div className="p-3 rounded-lg bg-red-950/80 border border-red-800 text-xs text-red-300">
-              {error}
-            </div>
-          )}
-
-          <form onSubmit={handleLogin} className="space-y-4">
-            <Input
-              label="Official Hospital Email"
+        {/* Form Fields */}
+        <form onSubmit={handleLogin} className="space-y-4 max-w-md mx-auto">
+          <div className="space-y-1.5 text-left">
+            <label className="block text-xs font-semibold text-slate-700">
+              Email
+            </label>
+            <input
               type="email"
+              placeholder="e.g. contact@hospital.gov.ng"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="bg-slate-950 border-slate-700 text-white"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#0837ad] focus:border-transparent transition-all"
             />
+          </div>
 
-            <Input
-              label="Password"
-              type="password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="bg-slate-950 border-slate-700 text-white"
-            />
+          <div className="space-y-1.5 text-left">
+            <label className="block text-xs font-semibold text-slate-700">
+              Password
+            </label>
+            <div className="relative">
+              <input
+                type={showPassword ? 'text' : 'password'}
+                placeholder="Enter your password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full px-4 py-3 pr-11 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#0837ad] focus:border-transparent transition-all"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 focus:outline-none"
+              >
+                {showPassword ? (
+                  <EyeSlash className="w-5 h-5" />
+                ) : (
+                  <Eye className="w-5 h-5" />
+                )}
+              </button>
+            </div>
+          </div>
 
-            <Button type="submit" variant="primary" size="lg" className="w-full" isLoading={isLoading}>
-              Sign In to Hospital Dashboard
-            </Button>
-          </form>
-
-          <div className="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-            <span>New healthcare facility?</span>
-            <Link href="/hospital/register" className="text-blue-400 font-semibold hover:underline flex items-center gap-1">
-              Apply for Verification <ArrowRight className="w-3.5 h-3.5" />
+          {/* Options: Remember Me & Forgot Password */}
+          <div className="flex items-center justify-between text-xs pt-1">
+            <label className="flex items-center gap-2 cursor-pointer text-slate-600 select-none">
+              <input
+                type="checkbox"
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+                className="w-4 h-4 rounded border-slate-300 text-[#0837ad] focus:ring-[#0837ad]"
+              />
+              <span>Remember Me</span>
+            </label>
+            <Link href="/contact" className="text-[#0837ad] font-semibold hover:underline">
+              Forgot Password?
             </Link>
           </div>
-        </Card>
 
-        <div className="text-center">
-          <Link href="/" className="text-xs text-blue-200 hover:text-white transition-colors">
-            ← Return to Rahama Public Site
-          </Link>
+          {/* Action Button */}
+          <div className="pt-2">
+            <Button
+              type="submit"
+              variant="primary"
+              size="lg"
+              className="w-full rounded-xl py-3.5 text-sm sm:text-base font-semibold shadow-lg shadow-blue-900/15"
+              isLoading={isLoading}
+            >
+              Login
+            </Button>
+          </div>
+        </form>
+
+        {/* Bottom Switch Links */}
+        <div className="mt-8 text-center text-xs text-slate-500 space-y-2">
+          <p>
+            Not registered yet?{' '}
+            <Link href="/hospital/register" className="text-[#0837ad] font-semibold hover:underline inline-flex items-center gap-0.5">
+              Create an account ↗
+            </Link>
+          </p>
+          <div>
+            <Link href="/" className="text-slate-500 hover:text-slate-800 transition-colors">
+              ← Return to Public Website
+            </Link>
+          </div>
         </div>
+
       </div>
     </div>
   );

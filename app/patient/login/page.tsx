@@ -5,15 +5,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
-import { Card } from '@/components/ui/Card';
 import { authService } from '@/services/auth.service';
-import { UserGear, LockKey } from '@phosphor-icons/react';
+import { Eye, EyeSlash } from '@phosphor-icons/react';
 
 export default function PatientLoginPage() {
   const router = useRouter();
   const [healthId, setHealthId] = useState('RH-8492-9102-NG');
   const [pin, setPin] = useState('1234');
+  const [showPin, setShowPin] = useState(false);
+  const [rememberMe, setRememberMe] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleLogin = async (e: React.FormEvent) => {
@@ -29,78 +29,128 @@ export default function PatientLoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-[#000066] text-white p-4 relative overflow-hidden">
-      <div className="w-full max-w-md relative z-10 space-y-6">
-        <div className="text-center space-y-2">
-          <Link href="/" className="inline-flex items-center gap-3">
-            <div className="w-11 h-11 rounded-2xl bg-[#0837ad] flex items-center justify-center p-1.5 shadow-lg border border-blue-400/20 overflow-hidden">
+    <div className="min-h-screen bg-[#e8edfc] flex items-center justify-center p-4 sm:p-6 lg:p-8 relative selection:bg-[#0837ad] selection:text-white">
+      {/* Centered White Card (Exact Match to Invooce Reference) */}
+      <div className="w-full max-w-xl bg-white rounded-[28px] sm:rounded-[32px] shadow-xl shadow-blue-900/5 border border-slate-100 p-8 sm:p-12 lg:p-14 relative">
+        
+        {/* Top Header: Logo on Left, Portal Badge on Right */}
+        <div className="flex items-center justify-between mb-8 sm:mb-10">
+          <Link href="/" className="inline-flex items-center gap-2.5 group">
+            <div className="w-8 h-8 rounded-lg bg-[#0837ad] flex items-center justify-center p-1.5 shadow-sm transition-transform group-hover:scale-105 overflow-hidden">
               <Image
                 src="/rahama-logo-white.png"
-                alt="Rahama Digital Health Logo"
-                width={40}
-                height={40}
+                alt="Rahama Logo"
+                width={28}
+                height={28}
                 className="w-full h-full object-contain"
                 priority
               />
             </div>
-            <div className="flex flex-col text-left justify-center">
-              <span className="text-xl font-bold font-heading tracking-tight text-white leading-tight">
-                RAHAMA <span className="text-blue-300">PATIENT PORTAL</span>
-              </span>
-              <span className="text-[10px] font-bold tracking-widest text-blue-400 uppercase leading-none">
-                DIGITAL HEALTH
-              </span>
-            </div>
+            <span className="text-base font-black font-heading tracking-tight text-slate-900">
+              Rahama
+            </span>
           </Link>
-          <p className="text-xs text-blue-200">Personal Health Identity & Consent Management</p>
+          <span className="text-[11px] font-semibold text-[#0837ad] bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            Patient Portal
+          </span>
         </div>
 
-        <Card className="bg-slate-900 border-slate-800 p-6 sm:p-8 text-slate-100 shadow-2xl space-y-6">
-          <div className="flex items-center gap-3 pb-4 border-b border-slate-800">
-            <div className="p-2.5 rounded-xl bg-blue-950 text-blue-400">
-              <UserGear className="w-6 h-6" />
-            </div>
-            <div>
-              <h2 className="text-lg font-bold font-heading text-white">Patient Access</h2>
-              <p className="text-xs text-slate-400">View records & manage permissions</p>
-            </div>
-          </div>
+        {/* Center Title & Greeting */}
+        <div className="text-center space-y-1 mb-8">
+          <h1 className="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 tracking-tight">
+            Login
+          </h1>
+          <p className="text-sm text-slate-500 font-medium">
+            Hi, Welcome back 👋
+          </p>
+        </div>
 
-          <form onSubmit={handleLogin} className="space-y-4">
-            <Input
-              label="Rahama Health ID or Registered Phone"
+        {/* Form Fields */}
+        <form onSubmit={handleLogin} className="space-y-4 max-w-md mx-auto">
+          <div className="space-y-1.5 text-left">
+            <label className="block text-xs font-semibold text-slate-700">
+              Email or Rahama ID
+            </label>
+            <input
+              type="text"
               placeholder="e.g. RH-8492-9102-NG"
               required
               value={healthId}
               onChange={(e) => setHealthId(e.target.value)}
-              className="bg-slate-950 border-slate-700 text-white font-mono"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-[#0837ad] focus:border-transparent transition-all"
             />
-
-            <Input
-              label="Access PIN / Password"
-              type="password"
-              placeholder="••••"
-              required
-              value={pin}
-              onChange={(e) => setPin(e.target.value)}
-              className="bg-slate-950 border-slate-700 text-white"
-            />
-
-            <Button type="submit" variant="primary" size="lg" className="w-full" isLoading={isLoading}>
-              Sign In to Patient Portal
-            </Button>
-          </form>
-
-          <div className="p-3 rounded-lg bg-blue-950/60 border border-blue-900 text-xs text-blue-200">
-            <strong>Note:</strong> Patients are registered into Rahama by their hospital facility during clinical intake.
           </div>
-        </Card>
 
-        <div className="text-center">
-          <Link href="/" className="text-xs text-blue-200 hover:text-white">
-            ← Return to Public Website
-          </Link>
+          <div className="space-y-1.5 text-left">
+            <label className="block text-xs font-semibold text-slate-700">
+              Password / Access PIN
+            </label>
+            <div className="relative">
+              <input
+                type={showPin ? 'text' : 'password'}
+                placeholder="Enter your PIN or password"
+                required
+                value={pin}
+                onChange={(e) => setPin(e.target.value)}
+                className="w-full px-4 py-3 pr-11 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#0837ad] focus:border-transparent transition-all"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPin(!showPin)}
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 focus:outline-none"
+              >
+                {showPin ? (
+                  <EyeSlash className="w-5 h-5" />
+                ) : (
+                  <Eye className="w-5 h-5" />
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* Options: Remember Me & Forgot Password */}
+          <div className="flex items-center justify-between text-xs pt-1">
+            <label className="flex items-center gap-2 cursor-pointer text-slate-600 select-none">
+              <input
+                type="checkbox"
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+                className="w-4 h-4 rounded border-slate-300 text-[#0837ad] focus:ring-[#0837ad]"
+              />
+              <span>Remember Me</span>
+            </label>
+            <Link href="/contact" className="text-[#0837ad] font-semibold hover:underline">
+              Forgot Password?
+            </Link>
+          </div>
+
+          {/* Action Button */}
+          <div className="pt-2">
+            <Button
+              type="submit"
+              variant="primary"
+              size="lg"
+              className="w-full rounded-xl py-3.5 text-sm sm:text-base font-semibold shadow-lg shadow-blue-900/15"
+              isLoading={isLoading}
+            >
+              Login
+            </Button>
+          </div>
+        </form>
+
+        {/* Bottom Switch Links */}
+        <div className="mt-8 text-center text-xs text-slate-500 space-y-2">
+          <p>
+            Not registered yet?{' '}
+            <span className="text-slate-700 font-medium">Patients are registered by hospitals during intake.</span>
+          </p>
+          <div>
+            <Link href="/" className="text-[#0837ad] font-semibold hover:underline inline-flex items-center gap-1">
+              ← Return to Public Website
+            </Link>
+          </div>
         </div>
+
       </div>
     </div>
   );
